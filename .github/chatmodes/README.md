@@ -12,6 +12,37 @@ A custom chat mode is a bundled set of instructions, constraints, and examples t
 
 A chat mode prompt document is a small, opinionated specification that the runtime combines with user messages to shape the assistant's behavior. The document is typically organized into a concise set of sections; the order matters because later sections can refine or constrain what came before. Below we describe the common sections and what they should contain.
 
+### File name and location
+
+Chat mode files are Markdown documents that use the `.chatmode.md` extension. For workspace-shared modes, place files in the `.github/chatmodes/` folder so collaborators can discover and use them; for personal modes put them in your VS Code profile folder. Name the file to match the mode's `name` frontmatter (kebab-case) for clarity, e.g. `code-synthesis.chatmode.md`.
+
+You can create a new mode using the VS Code command palette (Chat: New Mode File) or via Configure Chat > Modes in the Chat view; the editor will scaffold a `.chatmode.md` file for you.
+
+### Frontmatter (VS Code keys)
+
+VS Code recognizes a small set of frontmatter keys that affect how modes behave in the editor and which tools are available. At minimum include these keys in the top YAML frontmatter so VS Code can display and configure the mode correctly:
+
+- `description` (string): Brief description used as placeholder text in the chat input and as hover text in the mode picker.
+- `tools` (list[string]): Names of tools or tool sets available for this mode (for example: `['codebase','fetch','search']`). Use the Configure Tools action to select valid tool names.
+- `model` (string, optional): Model override for this mode. If omitted, the user's selected model is used.
+
+Example frontmatter (VS Code-focused):
+
+```yaml
+---
+description: Generate an implementation plan for a feature or refactor.
+tools: ['codebase', 'search', 'fetch']
+model: Claude Sonnet 4
+---
+```
+
+Note: This repository also uses canonical metadata fields (see the "Frontmatter" section above) such as `name`, `version`, `owner`, and `required_sections` for tooling and CI; include both the VS Code keys and the repository keys when appropriate.
+
+### Structure
+
+0. Frontmatter
+	- See canonical frontmatter fields above (description, tools, model).
+
 1. Title and Purpose
 	- A short title and one-sentence description of the mode's intent. This helps reviewers and users quickly understand when to select this mode.
 
