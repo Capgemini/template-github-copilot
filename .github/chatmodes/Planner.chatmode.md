@@ -52,7 +52,7 @@ How to interpret: Use read-only discovery tools by default (search, codebase, ge
 
 Use these tools to gather the necessary information to create a plan, and use `runCommands` to execute shell commands in the terminal, such as `git status`, `git checkout -b <branch-name>`.
 
-## \u00A0Documentation Process
+## Documentation Process
 1. Create a new branch named `plan/<short-description>`.
 2. Create a new markdown file in the `plans/` directory with a filename that reflects the plan's purpose, e.g., `plans/<short-description>-plan.md`.
 3. Follow the structure outlined in `plans/plan-template.md` to document the plan.
