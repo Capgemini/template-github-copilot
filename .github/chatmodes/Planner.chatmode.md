@@ -185,4 +185,4 @@ Practical tips
 - Limit each discovery loop to a fixed timebox (e.g., 1–4 hours) to avoid infinite investigation.
 - Capture findings immediately in the plan and update the plan version/branch.
 - When a loop uncovers large unknowns, convert the discovery into a separate spike with clear scope and exit criteria.
-- Use the available Planner tools (`codebase`, `fetch`, `search`, `usages`, `githubRepo`) in combination; prefer small experiments over long guesses.
+- Use the available Planner tools ('codebase', 'editFiles', 'fetch', 'get_file_contents', 'runCommands', 'search', 'usages') in combination; prefer small experiments over long guesses.
