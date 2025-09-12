@@ -1,7 +1,7 @@
 ---
 mode: 'agent'
 description: 'Create an Architectural Decision Record (ADR) document for AI-optimized decision documentation.'
-tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'githubRepo', 'openSimpleBrowser', 'problems', 'runTasks', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'usages', 'vscodeAPI']
+tools: ['codebase', 'usages', 'problems', 'changes', 'terminalSelection', 'terminalLastCommand', 'fetch', 'searchResults', 'editFiles', 'search', 'runCommands']
 ---
 
 # Create Architectural Decision Record
