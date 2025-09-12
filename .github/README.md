@@ -10,7 +10,8 @@ You can use this repository as a template when creating a new repository:
 
 - For organisations other than this one, copy this repository to your organisation.
 - When creating a new repository, select this repository as a template.
-- Read the docs [README.md](../docs/README.md) and follow the instructions therein.
+- Read the [Documentation README.md](../docs/README.md) and follow the instructions therein.
+- Read the [Project README.md](../README.md) and follow the instructions therein.
 - Delete this file!
 
 ### Copying Copilot Customisations
