@@ -17,6 +17,7 @@ This file provides general instructions and context for all AI agents working in
 - Documentation is stored in the `docs/` directory. This includes general documentation, architectural decision records (ADRs), and product requirements documents (PRDs).
 - Project plans and related planning materials are stored only in the `plans/` directory.
 - Strictly follow the instructions on plan creation and management that are found in the `plans/README.md`.
+- Agent todo items MUST be maintained as a Markdown checkbox list only in `plans/TODO.md`, not in any other agent-specific file.
 - Source code will be stored in the `src` directory.
 
 **For Humans:**

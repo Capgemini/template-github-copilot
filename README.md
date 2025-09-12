@@ -21,6 +21,24 @@ This repository is designed to help teams adopt Copilot best practices, understa
 
 <!-- Replace this paragraph with hints on finding information elsehwere in the repository -->
 
+## Best Practices
+
+Reuse and reference instructions files in your prompt files and chat modes to keep them clean and focused, and to avoid duplicating instructions.
+
+- Keep instructions modular and single-purpose: one file = one responsibility (e.g., safety rules, tone, examples).
+- Use clear file names and a one-line summary at the top so contributors can find intent quickly.
+- Lead with an explicit, human-readable “What to do” section: 1–3 concrete steps or a checklist people can follow immediately.
+- Provide one short example and one minimal counterexample for each rule so users and agents see expected output.
+- Prefer imperative, action-oriented phrasing (“Do X”, “Avoid Y”) and concrete defaults (e.g., “Prefer 80-char lines”, “Use present tense”).
+- Include required constraints up front (security, privacy, licensing, disallowed content) and where to raise exceptions.
+- Surface usage patterns: when to reuse this file vs. override it; link to canonical files rather than duplicating content.
+- Add machine-friendly snippets or templates (prompts, code blocks, placeholders) that can be copy-pasted into prompts or chat modes.
+- Keep guidance short (1–3 sentences per rule) and add a “Why this matters” one-liner for context when necessary.
+- Version and change-log key updates so consumers know when behavior changed.
+- Include a brief test plan or example queries that validate the instruction works as intended.
+- Avoid embedding secrets or environment-specific data; reference where secure configs live (e.g., repo secrets, vault).
+- When in doubt, be explicit: busy users prefer exact commands/phrases to adapt rather than broad theory.
+
 ## Where to find more information
 
 - See `AGENTS.md` for general AI agent instructions and project context

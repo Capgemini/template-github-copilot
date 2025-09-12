@@ -1,6 +1,7 @@
 # Plans Directory
 
-TODO
+TODO explain the role of Plans.
+TODO explain the role of TODO items.
 
 ## Archive
 

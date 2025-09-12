@@ -6,7 +6,9 @@ tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'githubRepo',
 
 # Create Architectural Decision Record
 
-Create an ADR document for `${input:DecisionTitle}` using structured formatting optimised for AI consumption and human readability.
+Create an ADR document for `${input:DecisionTitle}` using structured formatting optimised for AI consumption and human readability. If you do not have enough information to create the ADR, ask the user for more context.
+
+If you are not using a branch, create a new branch named `adr/[brief-title-slug]` where `[brief-title-slug]` is a short, hyphenated version of the decision title.
 
 ## ADR approval process
 

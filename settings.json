@@ -1,0 +1,8 @@
+{
+  "github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
+    { "file": "docs/engineering/pull-request-guidelines.md" },
+  ],
+  "github.copilot.chat.reviewSelection.instructions": [
+    { "file": "docs/engineering/code-review-guidelines.md" },
+  ]
+}
