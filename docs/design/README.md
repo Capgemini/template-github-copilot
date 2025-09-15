@@ -1,6 +1,6 @@
 # Design Directory
 
-TODO
+This directory contains design documents that explain how the system is structured and how features should be implemented. Use it to communicate approach, rationale, and trade-offs before or alongside implementation.
 
 ## Index
 
@@ -8,12 +8,12 @@ TODO
 
 ## Design Documents
 
-TODO explain which design documents live in the repository and which live outside.
+Design docs that affect this repository's code should live here. If your organization maintains platform-wide or cross-repo design docs elsewhere (e.g., Confluence, Google Docs), link them from the External section below.
 
 ### In-repository Design documents
 
-TODO list of links to the project's sources of design documentation.
+- (Add links to design documents in this repository)
 
 ### External Design documents
 
-REPLACEME with list of links to the project's other sources of design documentation.
+- (Add links to external design docs or diagrams hosted outside the repo)

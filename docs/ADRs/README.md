@@ -1,6 +1,6 @@
 # Architecture Decision Records
 
-TODO
+ADRs document significant architectural decisions along with their context and consequences. They create a durable record that helps future maintainers understand why choices were made.
 
 ## ADR approval process
 
@@ -8,6 +8,6 @@ TODO
 
 ## Index
 
-TODO the list below has links to all ADRs in sequential order
+Add links to ADRs in sequential order using the naming convention `adr-NNNN-title-slug.md`.
 
 - [ADR 0001 Brief Title Slug](adr-0001-brief-title-slug.md)

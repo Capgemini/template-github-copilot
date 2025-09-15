@@ -1,6 +1,6 @@
 # Architecture Directory
 
-TODO
+This directory describes the system architecture. It provides an entry point to architectural decision records and diagrams that explain the system's structure and interactions.
 
 ## Architecture Decision Records
 
@@ -8,12 +8,12 @@ TODO
 
 ## Architecture Documents
 
-TODO explain which architecture documents live in the repository and which live outside.
+Architecture docs that are specific to this repository should live here. Organization-wide or platform architecture documents may live outside—link those in the External section.
 
 ### In-repository Architecture documents
 
-TODO list of links to the project's sources of architecture documentation.
+- (Add links to architecture docs in this repository)
 
 ### External Architecture documents
 
-REPLACEME with list of links to the project's other sources of architecture documentation.
+- (Add links to external architecture documents or diagrams)

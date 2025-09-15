@@ -1,10 +1,10 @@
 # Product Requirement Docs
 
-TODO
+PRDs define product goals, scope, stakeholders, and success criteria. Use this directory to collaborate on feature shaping and align engineering with product outcomes.
 
 ## Index
 
-<!-- Add a list of links to the PRDs -->
+- Add links to PRDs here. Use clear, descriptive filenames (e.g., `prd-feature-x.md`).
 
 ## Archive
 
