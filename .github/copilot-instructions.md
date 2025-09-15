@@ -11,6 +11,31 @@ This repository is a GitHub Template created by Capgemini's AI & Software Engine
 - Reference `AGENTS.md` for broader AI agent instructions and context.
 
 
+## Project Methodologies
+
+TODO branching strategy (prefer lightweight, trunk-based-development, small but numerous commits), commit message conventions, PR review process, CI/CD practices, etc.
+TODO only work in short-lived branches, create PRs for all changes, get at least one approval before merging, etc.
+
+TODO reinforcement of branch and PR naming conventions, e.g., feature/brief-description, fix/brief-description, docs/brief-description, etc.
+
+TODO reinforcement of commit message conventions, e.g., use imperative mood, reference issues, etc.
+
+TODO reinforcement of branch and commit process, e.g., rebase before merging, squash commits, etc.
+
+TODO reinforcement of branch and commit process, using embedded XML text structures to reinforce instructions to the AI assistant.
+
+TODO reinforcement of branch and commit process, using Mermaid process diagram to reinforce instructions to the AI assistant.
+
+
+## Coding Standards
+
+TODO general coding standards, linting rules, formatting guidelines, etc.
+TODO make a reference to project-specific coding standards, linting rules, formatting guidelines, etc. They will be found in docs/engineering/standards.md or similar.
+
+---
+
+## Repository Overview (This section may be removed if this is used as a template)
+
 **.github Directory Structure & Purpose:**
 
 The `.github` directory contains several subdirectories and files that organize configuration, prompts, and instructions for Copilot and other AI agents:
