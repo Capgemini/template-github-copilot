@@ -66,24 +66,7 @@ Follow idiomatic practices for the chosen programming language and framework. Pr
 4.  **API Development**: Use controllers for API endpoints and follow RESTful principles.
 5.  **Security**: Use ASP.NET Core Identity for authentication and authorization.
 
-#### Flask
-
-TODO standard blocks of instructions for backend development for each language to be deleted as necessary
-
-#### Django
-
-1. **Project Structure**: Follow the Django project structure conventions.
-2. **Settings Management**: Use environment variables for sensitive settings.
-3. **Database Migrations**: Manage database schema changes with migrations.
-4. **Static Files**: Serve static files using Django's built-in mechanisms.
-
-### .NET Core & C#
-
-TODO standard blocks of instructions for backend development for each language to be deleted as necessary
-
-#### ASP.NET Core
-
-TODO standard blocks of instructions for backend development for each language to be deleted as necessary
+<!-- Removed duplicated placeholder sections to avoid conflicts; guidance above already covers Flask, Django, and ASP.NET Core. -->
 
 ## API Development
 
