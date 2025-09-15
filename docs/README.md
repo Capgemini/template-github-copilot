@@ -4,7 +4,7 @@
 
 # Documents Directory
 
-TODO
+This directory contains all project-related documentation, organized into subdirectories based on its purpose.
 
 ## Index
 
