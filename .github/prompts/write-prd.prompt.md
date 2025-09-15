@@ -87,6 +87,3 @@ Where helpful, add short implementation notes and suggested acceptance tests tha
 
 - Use the `docs/PRDs/prd-template.md` as the canonical template. Ensure front matter or filename conventions used in this repo are followed.
 - If you save a file, prefer creating a branch and committing the file; if you cannot push, notify the user and provide exact git commands they can run locally.
-
-```
-```
