@@ -13,6 +13,8 @@ Audience: maintainers and contributors configuring Copilot or repository automat
 
 The custom chatmodes, instructions and prompts can be copied into the same directory structure of another repository. Each file has comments that explain the approach, structure and content of each file.
 
+Each of these files contains **HTML comments** that explain the funtionality, intent and any prompting methods used to reinforce instructions to the AI assistant. **Read the raw source code** to see this information.
+
 ## GitHub Copilot Customisation
 
 The [copilot-instructions.md](copilot-instructions.md) file contains the main instructions for Github Copilot.
