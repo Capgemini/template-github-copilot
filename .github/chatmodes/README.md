@@ -4,6 +4,14 @@ This document explains how we author and maintain custom chat modes for Copilot 
 
 A custom chat mode is a bundled set of instructions, constraints, and examples that guide the language model to behave in a consistent, predictable way for a particular task or personality. Chat modes encode the expected role (persona), the step-by-step process the assistant should follow, the allowed output formats, and representative examples that demonstrate correct and incorrect behavior. By keeping these definitions explicit and version-controlled, teams can iterate on assistant behavior and reuse modes across projects.
 
+## Chat modes in this repository
+
+- [Code Review](CodeReview.chatmode.md)
+- [Developer](Developer.chatmode.md)
+- [Documentation](Documentation.chatmode.md)
+- [Planner](Planner.chatmode.md)
+- [Testing](Testing.chatmode.md)
+
 ## Official Docs
 
  - [Visual Studio Code chat mode docs](https://code.visualstudio.com/docs/copilot/customization/custom-chat-modes)

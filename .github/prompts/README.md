@@ -2,6 +2,14 @@
 
 This directory contains reusable prompt files that extend Copilot Chat with repeatable tasks (e.g., "Write ADR", "Write PRD"). Prompts standardize how assistants operate, capture inputs, and produce consistent outputs.
 
+## Custom prompts in this repository
+
+- [/copilot-setup-check](copilot-setup-check.prompt.md)
+- [/write-adr](write-adr.prompt.md)
+- [/write-docs](write-docs.prompt.md)
+- [/write-ears-spec](write-ears-spec.prompt.md)
+- [/write-prd](write-prd.prompt.md)
+
 ## How to use
 - In Copilot Chat, type the prompt name or pick it from the quick actions list.
 - Many prompts can be invoked like a slash command (e.g., `/write-adr`). If your IDE surfaces prompt files differently, open the prompt and follow its inputs section.

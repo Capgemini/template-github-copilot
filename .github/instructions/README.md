@@ -4,6 +4,13 @@ This directory contains repository-level instruction documents that guide AI ass
 
 These files are written primarily for AI consumption but should also be clear to human maintainers. They are small, focused, machine-friendly documents that provide rules, conventions and contextual information the assistant needs to make good decisions.
 
+## Custom instructions in this repository
+
+- [Backend](backend.instructions.md)
+- [BDD Tests](bdd-tests.instructions.md)
+- [Docs](docs.instructions.md)
+- [Frontend](frontend.instructions.md)
+
 ## Purpose
 
 - Give AI assistants repository-specific policies, coding standards, workflow rules, and behavioral constraints.
