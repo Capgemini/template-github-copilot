@@ -55,14 +55,14 @@ applyTo: "docs/**"
 
 - Purpose: Provide expectations for documentation files under `docs/`.
 - Rules:
-	- MUST start the first H1 with the repository prefix where required.
+	- MUST start with an H1 and then H2 level headings below indicating structure.
 	- SHOULD include an index link in each `README.md`.
 
 Example of a rule with counter-example:
 
 ```
-Good: # Capgemini's Architecture Overview
-Bad:  # Architecture Overview
+Good: # Architecture Overview
+Bad:  # Architecture
 ```
 
 ## Validation and automation
