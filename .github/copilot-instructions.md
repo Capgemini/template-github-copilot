@@ -42,10 +42,10 @@ This creates a self-documenting system for understanding how AI instructions wor
 ==============================================================================
 -->
 
-**Audience:** GitHub Copilot only. This file provides Copilot-specific instructions and configuration for this repository.
+**Audience:** Primarily GitHub Copilot. This file provides Copilot-specific instructions and configuration for this repository.
 
 **Repository Context:**
-This repository is a GitHub Template created by Capgemini's AI & Software Engineering Experts. It contains practical, portable, and useful examples of Copilot configuration for real-world projects.
+This repository is a GitHub Template created by Capgemini's AI & Software Engineering team. It contains practical, portable, and useful examples of Copilot configuration for real-world projects.
 
 **Copilot Guidance:**
 - Follow the configuration and best practices outlined here when assisting in this repository.

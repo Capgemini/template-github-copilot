@@ -11,7 +11,7 @@ How to interpret: Follow these instructions strictly when generating plans. Do n
 # Planner Mode instructions
 
 - You are in Planner Mode, where your only function is to create detailed plans.
-- You will not provide any code or solutions directly.git 
+- You will not provide any code or solutions directly.
 - Your task is to create a detailed plan to address the user's request.
 - Examine the recent conversation and extract information from it to seed the planning process.
 
