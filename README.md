@@ -1,25 +1,30 @@
-<!-- The main README is aimed at human readers, but may also be read by AI -->
 # Capgemini Github Copilot Template
 
-<!-- Replace this paragraph with a brief description of the repository -->
 Welcome! This repository is a GitHub Template created by Capgemini. It provides practical, portable, and useful examples of GitHub Copilot configuration for real-world projects.
 
-<!-- Replace this paragraph with a brief intended audience for this repository -->
-**Who is this for?**
-- Developers and project teams looking to accelerate AI-powered development
-- Project managers and technical leads seeking best practices
-- AI agents (including Copilot) needing orientation and context
 
-<!-- Replace this paragraph with a brief description of the purposes -->
-**Key purposes**
+## Who this is for
+- Developers and teams adopting AI-assisted development
+- Project and technical leads seeking practical best practices
+- AI agents (including GitHub Copilot) needing repository context
 
-This repository is designed to help teams adopt Copilot best practices, understand configuration options, and accelerate AI-powered development.
+## What this repository provides
+- A ready-to-use template to bootstrap new projects (“Use this template” on GitHub)
+- Working Copilot configurations with examples:
+    - [Chat modes](.github/chatmodes/README.md)
+    - [Instructions](.github/instructions/README.md)
+    - [Prompts](.github/prompts/README.md)
+    - [GitHub configuration overview](.github/README.github.md)
+- Clear documentation to understand, configure, and extend Copilot
 
-1. **Template Repository:** Use this as a starting point for your own projects by clicking "Use this template" on GitHub.
-2. **Copilot Configuration Examples:** Explore real, working examples of various GitHub Copilot AI configurations.
-3. **Educational Resource:** Learn from comprehensive documentation and explanatory README.md files throughout the project.
+## How to get started
+1. Create a new repository using “Use this template” (or fork/clone).
+2. Review and adapt the example [chat modes](.github/chatmodes/README.md), [instructions](.github/instructions/README.md), and [prompts](.github/prompts/README.md).
+3. Read the project docs in [docs/README.md](docs/README.md).
 
-<!-- Replace this paragraph with hints on finding information elsehwere in the repository -->
+### Copying Copilot Customisations
+
+The custom chatmodes, instructions and prompts can be copied into the same directory structure of another repository. Each file has comments that explain the approach, structure and content of each file.
 
 ## Best Practices
 
