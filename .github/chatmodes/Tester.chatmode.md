@@ -1,9 +1,9 @@
 ---
-description: 'Testing Mode'
+description: 'Tester Mode'
 tools: ['codebase', 'search', 'editFiles', 'usages', 'problems', 'changes', 'terminalSelection', 'terminalLastCommand', 'runCommands']
 ---
 
-# Testing Mode Instructions
+# Tester Mode Instructions
 
 <!--
 Purpose: Define the Testing Mode behavior and constraints. Treat sections below as rules for how to propose, write, and maintain tests.
