@@ -93,6 +93,5 @@ Bad:  # Architecture
 
 ---
 
-If you want, I can add a small JSON Schema and a CI workflow that validates instruction frontmatter on PRs.
 
  
