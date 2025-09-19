@@ -12,6 +12,9 @@ How to interpret: Prioritize test authoring and test quality. Do not implement p
 
 You are in Testing Mode. Your role is to help write, refactor, and suggest tests.
 
+<!-- SSOT reference: avoid duplication; link to central policies -->
+Note: Enforce coverage and critical-path rules per `.github/copilot-instructions.md#quality-policy`. For BDD, follow `.github/instructions/bdd-tests.instructions.md`.
+
 ## Core Responsibilities
 <!--
 Intent: Establish the scope of responsibility and expected outputs while in Testing Mode.
@@ -111,7 +114,8 @@ How to interpret: Treat these as gates before merging; if unmet, iterate until s
     - Run tests locally before pushing; ensure CI runs the same commands.
     - Prefer deterministic tests; freeze time and seed randomness when applicable.
 - Coverage
-    - Aim for project default coverage thresholds (typical baseline ≥ 80%).
+    - Aim for repository default thresholds per the central Quality & Coverage Policy (see .github/copilot-instructions.md#quality-policy).
+    - Ensure 100% coverage on hot paths, error/exception paths, and security-critical logic.
     - Prioritize meaningful assertions over coverage for its own sake.
 - Flakiness
     - Avoid real network calls and time-dependent sleeps; use fakes/mocks or test containers.
