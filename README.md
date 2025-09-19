@@ -271,3 +271,42 @@ flowchart LR
 - Directory structures are consistently referenced across multiple configuration files
 
 This hierarchy shows how the repository maintains consistency through strategic cross-referencing, with clear patterns for documentation workflows, planning processes, and configuration management.
+ 
+## Appendix: SSOT Source Map
+
+Authoritative single sources of truth (SSOT) for key policies and templates. Prefer linking to these instead of duplicating content.
+
+- Core policies and workflow
+    - Copilot instructions (SSOT): `.github/copilot-instructions.md`
+        - Quality & Coverage Policy: `.github/copilot-instructions.md#quality-policy`
+
+        ### CI Coverage Enforcement (template)
+
+        This repo includes a minimal coverage enforcement workflow (`.github/workflows/coverage.yml`) and script (`scripts/enforce-coverage.js`) aligned with the Quality & Coverage Policy:
+        - Global ≥ 90%; core modules ≥ 95%; integrations ≥ 85%; critical/hot/error/security paths 100%.
+        - The sample job looks for a Jest `coverage/coverage-summary.json`. Adapt the test step for your stack (e.g., Python `coverage.json`, Java `jacoco.xml` converted to JSON) and point the script to the generated summary.
+        - Branching & Workflow: see "Project Methodologies" in the same file
+        - Naming & Commit Conventions: see corresponding sections in the same file
+- Engineering guidelines
+    - Code review checklist (SSOT): `docs/engineering/code-review-guidelines.md#code-review-checklist`
+    - Pull request guidelines: `docs/engineering/pull-request-guidelines.md`
+- Documentation
+    - Docs authoring rules (SSOT): `.github/instructions/docs.instructions.md`
+    - Documentation flow anchor: `.github/instructions/docs.instructions.md#documentation-process-flow`
+- Testing
+    - BDD feature guidance (SSOT): `.github/instructions/bdd-tests.instructions.md`
+    - Tester chat mode (enforces policy): `.github/chatmodes/Tester.chatmode.md`
+- Backend
+    - Backend instructions (SSOT): `.github/instructions/backend.instructions.md`
+    - Architecture: `.github/instructions/backend.instructions.md#backend-architecture`
+    - Error handling: `.github/instructions/backend.instructions.md#backend-error-handling`
+    - Observability: `.github/instructions/backend.instructions.md#backend-observability`
+    - Security: `.github/instructions/backend.instructions.md#backend-security`
+- Planning
+    - Plan template (SSOT): `plans/plan-template.md`
+    - Small plan example: `plans/examples/plan-small.md`
+    - TODO (work queue): `plans/TODO.md`
+
+Notes:
+- Chat modes and prompts should reference these SSOT files. Avoid duplicating numeric thresholds, templates, or process steps in multiple places.
+- CI tasks (if added) should validate adherence to SSOT anchors where practical.
