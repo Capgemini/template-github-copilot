@@ -1,0 +1,22 @@
+# Lychee link checker configuration
+# See https://github.com/lycheeverse/lychee
+
+# Exclude common transient or rate-limited hosts
+exclude = [
+  "https://img.shields.io/",
+  "https://badgen.net/",
+  "https://github.com/capgemini/template-github-copilot/actions",
+]
+
+# Accept 429/403 as warnings instead of failures for rate-limited hosts
+accept = [429, 403]
+
+# Request options
+user_agent = "lychee-link-checker"
+max_concurrency = 20
+
+# Treat mailto and anchors as valid without network requests
+accept_pattern = [
+  "^mailto:",
+  "^#",
+]
