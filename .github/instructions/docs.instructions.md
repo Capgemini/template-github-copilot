@@ -161,6 +161,7 @@ Prompting techniques: Concise quality checklist that is easy to verify automatic
 Purpose: Visualize the documentation workflow and decision points.
 Prompting techniques: Mermaid diagram with loopbacks and explicit approval gate to reinforce process.
 -->
+<a name="documentation-process-flow"></a>
 ## Documentation Process (Flow)
 
 ```mermaid

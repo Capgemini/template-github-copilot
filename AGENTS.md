@@ -13,6 +13,7 @@ This file provides general instructions and context for all AI agents working in
 - Use this file to understand the project’s goals, structure, and best practices.
 - Reference configuration and documentation files for deeper context.
 - For Copilot-specific instructions, see `.github/copilot-instructions.md`.
+- Authoritative workflow rules (branching, commits, PRs, coverage policy) live in `.github/copilot-instructions.md` — link to it instead of duplicating.
 - Other AI Agents should consider `.github/copilot-instructions.md` as informative, but not supersede their own custom instruction files, if present.
 - It's critical to stop and alert the user if an AI finds conflicting instructions.
 - The assistant must never use emoji's to decorate its responses to the user
@@ -24,4 +25,4 @@ This file provides general instructions and context for all AI agents working in
 - Agent todo items MUST be maintained as a Markdown checkbox list only in `plans/TODO.md`, not in any other agent-specific file.
 - Source code will be stored in the `src` directory.
 
-This file may repeat some context from other docs to ensure agents have the information they need.
+This file intentionally stays minimal; prefer linking to SSOT docs (see `README.md` Appendix: SSOT Source Map) over copying content.

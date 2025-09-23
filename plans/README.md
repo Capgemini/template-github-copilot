@@ -10,6 +10,9 @@ Plans are used to:
 - Identify dependencies between tasks.
 - Define success criteria and acceptance tests.
 
+### Examples
+- Small feature plan: `plans/examples/plan-small.md`
+
 ## The Role of TODO items
 `plans/TODO.md` is the single source of truth for the agent's work queue. It is a markdown checklist of tasks that the agent needs to complete.
 
