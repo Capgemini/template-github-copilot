@@ -43,7 +43,7 @@ If any required input (FeatureTitle, Problem, Goals, Stakeholders, Specification
 
 - Use clear, unambiguous language suitable for product, design, and engineering readers
 - Follow the `docs/PRDs/prd-template.md` structure and include the same sections
-- Provide measurable objectives and success metrics where possible
+- Provide measurable objectives and success metrics; include at least 3 SMART metrics using the snippet at `.github/prompts/snippets/prd-success-metrics.snippet.md`
 - Mark requirements with priority tags (Must/Should/Could)
 - Include a short rollout/implementation notes section and suggested acceptance tests
 - Call out dependencies, constraints, and open questions explicitly
@@ -67,7 +67,7 @@ The generated PRD must follow the PRD template in `docs/PRDs/prd-template.md` an
 - Functional Requirements (with priorities)
 - Out of Scope
 - Non-Functional Requirements
-- Success Metrics
+- Success Metrics (populate using `.github/prompts/snippets/prd-success-metrics.snippet.md`)
 - Constraints & Assumptions
 - Timeline & Milestones
 - Risks & Mitigations

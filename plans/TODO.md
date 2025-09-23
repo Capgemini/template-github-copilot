@@ -1,2 +1,51 @@
 # TODO list
+# Repository Improvement TODOs
+
+Purpose: Track and review each suggested improvement from `recommendations.md` item by item. Use this as the authoritative checklist for implementation and review.
+
+Status legend:
+- Not started | In progress | Blocked | Done
+
+How to use:
+- Update Owner, Status, and Notes as work progresses.
+- Link PRs/issues in Notes.
+
+| ID | Area | Action | Files/Links | Acceptance Criteria | Priority | Owner | Status | Notes |
+|----|------|--------|-------------|---------------------|----------|-------|--------|-------|
+| P1-01 | Quality Policy | Add unified quality & coverage policy | `.github/copilot-instructions.md` (new anchor: `#quality-policy`); referenced by Developer/Tester chat modes | Section added with tiered targets; referenced (linked) from Developer and Tester chat modes; global threshold documented | High | AI | Done | Added section and updated Developer/Tester modes to reference it |
+| P1-02 | Docs Duplication | Prune duplicated doc templates; link to SSOT | `.github/instructions/docs.instructions.md` (SSOT); `Documentation.chatmode.md`; `write-docs.prompt.md` | Chat mode and prompt no longer duplicate templates; both link to docs.instructions | High | AI | Done | De-duplicated chat mode and prompt; added anchor to SSOT flow |
+| P1-03 | Estimation Policy | Resolve estimation model and align artifacts | `Planner.chatmode.md`; `plans/plan-template.md` | Single policy decided (duration or complexity); both files updated consistently | High | AI | Done | Adopted complexity-only (XS/S/M/L/XL); template and planner updated |
+| P1-04 | Branch/PR Rules | Centralize branching/commit/PR numeric limits | `.github/copilot-instructions.md`; `Developer.chatmode.md`; `CodeReviewer.chatmode.md` | Numeric rules live only in copilot-instructions; chat modes retain brief reference bullets | High | AI | Done | Added plan/ branch type and review SLA to SSOT; chat modes now reference SSOT and removed duplicates |
+| P1-05 | Review Checklist | Consolidate code review checklist to engineering guideline | `docs/engineering/code-review-guidelines.md`; `CodeReviewer.chatmode.md` | Detailed checklist in engineering doc; chat mode references it and focuses on taxonomy/empathy | High | AI | Done | Added anchored checklist and severity taxonomy; chat mode now references SSOT and is slimmer |
+| P1-06 | TODO Structure | Enrich this TODO with structure and examples | `plans/TODO.md` | Table present with priorities/owners; initial tasks populated (this change) | High | N/A | Done | Introduced table and seeded tasks |
+| P1-07 | Backend Guidance | Expand backend instructions (structure, errors, observability, security) | `.github/instructions/backend.instructions.md` | New sections added with minimal canonical patterns and examples | High | AI | Done | Added anchored sections: Architecture & Structure, Error Handling, Observability, Security Essentials; referenced SSOT |
+| P1-08 | BDD Guidance | Strengthen BDD tests instructions with examples and anti-patterns | `.github/instructions/bdd-tests.instructions.md` | At least 2 good vs bad scenario pairs; naming conventions; background/state tagging guidance | High | AI | Done | Added anchors for naming, background/state/tags; included 2 good-vs-bad scenario pairs and CI tagging guidance |
+| P1-09 | Small Plan Example | Add lightweight “Small Feature Plan” example | `plans/examples/plan-small.md` (new) | New example file added; linked from `plans/README.md` | High | AI | Done | Added example aligned to complexity-only; linked from plans README |
+| P1-10 | SSOT Source Map | Add “Source Map” appendix to README linking SSOT designations | `README.md` | Appendix added with links mapping domains to SSOT files | High | AI | Done | Added Appendix: SSOT Source Map with links to core policies and anchors |
+| P2-11 | GitHub README Consolidation | Fold `.github/README.github.md` into root `README.md` or leave stub | `.github/README.github.md`; `README.md` | Duplicated sections removed; unique GitHub-specific notes retained/merged; stub or removal justified | Medium | AI | Done | Kept distinct .github README, pruned duplication, added SSOT links and pointers to root |
+| P2-12 | Agents Landing | Keep `AGENTS.md` minimal; add explicit pointer to copilot-instructions | `AGENTS.md` | Line added: authoritative workflow rules in `.github/copilot-instructions.md` | Medium | AI | Done | Added explicit pointer to SSOT rules and note to keep file minimal |
+| P2-13 | Chat Modes SSOT | Declare chat modes authoring SSOT and avoid meta duplication | `.github/chatmodes/README.md`; all `*.chatmode.md` | README declares SSOT; each chat mode avoids restating meta-guidelines | Medium | AI | Done | Added SSOT section to chatmodes README; inserted SSOT reference notes in all modes |
+| P2-14 | Frontend Testing Reference | Explicitly reference testing standards | `.github/instructions/frontend.instructions.md` | Adds “Testing” subsection that links to Tester chat mode and BDD instructions | Medium | AI | Done | Added Testing section with links to Tester chat mode, BDD SSOT, and Quality Policy |
+| P2-15 | ADR Save Validation | Ensure ADR prompt enforces save path/versioning | `.github/prompts/write-adr.prompt.md`; `docs/ADRs/adr-template.md` | Prompt validates save under `docs/ADRs/` with sequence/timestamp; ADR template includes Status field | Medium | AI | Done | Prompt updated with sequence/timestamp rules, save validation, and commit guidance; template already has Status |
+| P2-16 | PRD Metrics Snippet | Extract reusable success metrics snippet | `.github/prompts/write-prd.prompt.md` | Dedicated “Success Metrics” snippet referenced in prompt | Medium | AI | Done | Added snippet `.github/prompts/snippets/prd-success-metrics.snippet.md` and referenced in prompt |
+| P2-17 | Docs Prompt Import | Make docs prompt import template from SSOT | `.github/prompts/write-docs.prompt.md` | Embedded template removed; imports from docs.instructions unless overridden | Medium | AI | Done | Prompt references docs.instructions SSOT with anchor; avoids embedding templates |
+| P2-18 | ROADMAP Badges | Add status badges to roadmap | `plans/ROADMAP.md` | Visible badges for Planned / In Progress / Done | Medium | AI | Done | Added shields.io badges and usage example to ROADMAP |
+| P2-19 | Settings Context | Evaluate adding docs/plan context to PR drafting | `settings.json` | Additional context improves PR descriptions (if useful); decision recorded | Medium | AI | Done | Added PR description sources: PR guidelines, SSOT, plans/TODO; added `.github/pull_request_template.md` |
+| P3-20 | Coverage Tiers Enforcement | Add CI script to enforce unified coverage thresholds | CI config/scripts (new) | CI fails below thresholds; exceptions documented via PR annotation | Low | AI | Done | Added `scripts/enforce-coverage.js` and workflow `.github/workflows/coverage.yml`; README notes how to adapt |
+| P3-21 | Markdown/Links Lint | Add markdown lint + link checker | CI config; `.markdownlint.json` (optional) | Lint + link check jobs added; passing on main | Low | AI | Done | Added `.markdownlint.jsonc`, `.lychee.toml`, and workflow `.github/workflows/docs-lint.yml` |
+| P3-22 | Policy Linter | Validate presence of required XML tags/sections | CI script (new) | Pipeline validates required SSOT sections exist in copilot-instructions | Low | AI | Done | Added `scripts/validate-policy.js` and workflow `.github/workflows/policy-lint.yml` |
+| P3-23 | Duplicate Section Detector | Detect copied canonical blocks in chat modes | CI script (new) | Build fails when duplicated canonical blocks detected | Low | TBD | Not started | |
+| P3-24 | ADR/PRD Schema Check | Validate required headings exist | CI script (new) | ADR/PRD files pass schema validation | Low | TBD | Not started | |
+| P3-25 | Plan Estimation Checker | Validate selected estimation model usage | CI script (new) | Plans validated for chosen estimation model consistency | Low | TBD | Not started | |
+| P3-26 | CHANGELOG & Versioning | Add CHANGELOG and policy version frontmatter | `CHANGELOG.md` (new); `.github/copilot-instructions.md`; `*.chatmode.md` | CHANGELOG added; policy version fields present and maintained | Low | TBD | Not started | |
+| P3-27 | New Chat Mode Rule | Enforce: no new chat mode restates templates—must link SSOT | `.github/chatmodes/README.md`; contribution docs | Rule documented; referenced in CONTRIBUTING/onboarding docs | Low | TBD | Not started | |
+| P3-28 | CONTRIBUTING (Optional) | Introduce `CONTRIBUTING.md` to consolidate contributor guidance | `CONTRIBUTING.md` (new) | File added; links to SSOTs; avoids duplication | Low | TBD | Not started | |
+
+Review checklist mapping:
+- Sections 1–8 from `recommendations.md` map primarily to tasks P1-01 through P1-10.
+- Section 9 (Priority Refactor Actions) aligns 1:1 with P1-01..P1-10.
+- Sections 10–16 inform P2/P3 tasks and maintenance items.
+
+Change log (for this file):
+- P1-06 completed by creating this structured TODO and seeding tasks.
 

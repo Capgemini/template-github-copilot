@@ -108,6 +108,7 @@ AI assistants MUST follow trunk-based development with lightweight, short-lived 
 - Commit frequency: Minimum 1 commit per day of active work
 - PR size: Target ≤ 400 lines of code changes per PR
 - Review requirement: At least 1 human reviewer approval required
+ - Review turnaround: Initial review feedback target ≤ 1 business day for typical PRs
 </WORKFLOW_ENFORCEMENT>
 
 <!--
@@ -142,6 +143,7 @@ AI assistants MUST use these exact naming patterns for branches and pull request
 - `refactor/` - Code refactoring without functional changes
 - `test/` - Test additions or modifications
 - `chore/` - Maintenance tasks (dependencies, build scripts)
+ - `plan/` - Planning artifacts and proposals
 
 **Examples:**
 - ✅ `feature/add-user-authentication`
@@ -340,6 +342,51 @@ AI assistants MUST follow these coding standards and reference project-specific 
 - Integration tests for complex workflows
 - Documentation updates for public APIs or significant changes
 - Security considerations documented and reviewed
+
+---
+
+<!--
+==============================================================================
+QUALITY & COVERAGE POLICY SECTION
+==============================================================================
+PURPOSE: Define a single source of truth (SSOT) for test coverage and quality
+targets across the repository. Eliminates conflicting mandates in chat modes.
+REINFORCEMENT TECHNIQUES:
+- Stable HTML anchor for cross-file references
+- Tiered numeric targets with clear enforcement and exception process
+- Directive language (MUST/SHOULD) to enable automation
+==============================================================================
+-->
+
+<a name="quality-policy"></a>
+## Quality & Coverage Policy
+
+Principles:
+- Tiered Targets: Apply realistic thresholds by test type and importance.
+- Quality > Percentage: Prefer meaningful assertions and coverage of error/security paths over chasing a numeric score.
+- Transparency: Exceptions must be explicit and justified in the PR.
+
+Tiered Targets:
+- Core domain logic: target ≥ 95% line/branch coverage
+- Integrations/adapters: target ≥ 85%
+- Generated scaffolds and spikes: opportunistic; may be exempt if tagged and justified in PR
+
+Enforcement:
+- Global threshold: CI fails if overall repository coverage < 90%
+- Module threshold: CI fails if any core module drops below its target (≥ 95%)
+
+Critical Coverage (must be 100%):
+- Hot paths (performance- or user-critical flows)
+- Error and exception paths (including negative and edge-case handling)
+- Security-relevant logic (authn/authz, input validation, data protection)
+
+Exceptions:
+- Use a PR footer section titled "Coverage Exception:" explaining scope, rationale, and risk mitigation
+- Obtain at least one reviewer acknowledgment of the exception in review comments
+
+References:
+- Chat modes (Developer/Tester) MUST reference this section instead of hardcoding numeric targets.
+- Project-specific overrides, if any, MUST be documented here to remain authoritative.
 
 ---
 

@@ -12,6 +12,15 @@ A custom chat mode is a bundled set of instructions, constraints, and examples t
 - [Planner](Planner.chatmode.md)
 - [Testing](Testing.chatmode.md)
 
+### SSOT and anti-duplication
+
+This README is the Single Source of Truth (SSOT) for how to author chat modes in this repo. Individual `*.chatmode.md` files should avoid restating global policies or templates. Instead, link to:
+- Central policies: `.github/copilot-instructions.md` (e.g., Quality & Coverage Policy, Branch/PR rules)
+- Documentation rules: `.github/instructions/docs.instructions.md`
+- Engineering guidelines: `docs/engineering/code-review-guidelines.md#code-review-checklist`
+
+Chat modes may include small, mode-specific process steps or examples, but must not duplicate canonical templates or numeric policies.
+
 ## Official Docs
 
  - [Visual Studio Code chat mode docs](https://code.visualstudio.com/docs/copilot/customization/custom-chat-modes)

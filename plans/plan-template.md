@@ -6,7 +6,7 @@ This document is a precise, unambiguous template for writing project or feature 
 
 - Dates: use ISO 8601 (YYYY-MM-DD). Example: `2025-09-11`.
 - People: use full name and email in angle brackets. Example: `Stuart Williams <stuart@example.com>`.
-- Durations: use ISO 8601 durations or human-friendly shorthand (e.g. `P2W` or `2 weeks`).
+- Estimates: use a relative complexity scale only (no time). Allowed values: `XS`, `S`, `M`, `L`, `XL`.
 - Links: use full absolute URLs.
 - Limits: where a max length is specified, do not exceed it.
 
@@ -91,18 +91,18 @@ Example:
 1. `M1 — Design complete — 2025-10-01 — Stuart Williams`
 2. `M2 — Staging rollout — 2025-11-15 to 2025-11-22 — Deployment Team`
 
-## 9. Task list (hierarchical, actionable tasks with estimates)
+## 9. Task list (hierarchical, actionable tasks with complexity estimates)
 - Provide a bullet list of tasks. Each task should include:
 	- id (e.g., `T-001`)
 	- title (one sentence)
 	- owner (person)
-	- estimate (duration; use `Xd`, `Xh`, or ISO duration)
+	- complexity (one of `XS`, `S`, `M`, `L`, `XL`)
 	- dependencies (array of task ids)
 	- done (boolean)
 - Example:
 
-- T-001 | Create OAuth2 service | Stuart Williams | 5d | deps: [] | done: false
-- T-002 | Update login UI | Frontend Dev <fe@example.com> | 3d | deps: [T-001] | done: false
+- T-001 | Create OAuth2 service | Stuart Williams | complexity: L | deps: [] | done: false
+- T-002 | Update login UI | Frontend Dev <fe@example.com> | complexity: M | deps: [T-001] | done: false
 
 ## 10. Risks and mitigations (table or list)
 - For each risk provide:
@@ -165,13 +165,13 @@ Filling guidance for AIs:
 4. Enforce max lengths where specified and truncate with an explicit note if exceeded.
 5. If any required field is `N/A`, add an explanatory note why it doesn't apply.
 
-Minimal required fields before publish: `Title`, `Short description`, `Owner`, `State`, `Objectives (>=1)`, `Success criteria (>=1)`, `Task list (>=1 task with owner and estimate)`, `Milestones (>=1)`.
+Minimal required fields before publish: `Title`, `Short description`, `Owner`, `State`, `Objectives (>=1)`, `Success criteria (>=1)`, `Task list (>=1 task with owner and complexity)`, `Milestones (>=1)`.
 
 Checklist before marking plan as ready for review:
 
 - [ ] All minimal required fields are filled.
 - [ ] Dates validated (ISO 8601).
-- [ ] Estimates present and normalized to days.
+- [ ] Complexity assigned to each task (XS/S/M/L/XL).
 - [ ] At least one test/validation approach is defined.
 - [ ] Security & compliance items are noted.
 

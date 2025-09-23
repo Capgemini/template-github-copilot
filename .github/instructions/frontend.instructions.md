@@ -28,7 +28,7 @@ PROMPTING: Imperative checklist for quick verification.
 1. **Code Structure**: Prefer small, reusable components and feature modules.
 2. **Styling**: Follow repo standard (CSS Modules/Tailwind/SCSS). Avoid inline styles except small dynamic cases.
 3. **Accessibility**: Prefer native controls, clear labels, visible focus, sufficient contrast.
-4. **Testing**: Use the project's testing stack (e.g., Jest + Testing Library). Follow Testing chatmode/instructions.
+4. **Testing**: Use the project's testing stack (e.g., Jest + Testing Library). See the Testing section below.
 
 <!--
 SECTION PURPOSE: Expectations when authoring components.
@@ -40,6 +40,29 @@ PROMPTING: Specify contract (props/state), error modes, and data flow norms.
 2. **State Management**: Prefer local state; lift to Context/Redux only when shared or cross-cutting.
 3. **API Calls**: Use the shared API client; centralize endpoints and schemas; handle errors explicitly.
 4. **Error Boundaries**: Add boundaries around risky trees; fail gracefully.
+
+<!--
+SECTION PURPOSE: Make testing guidance explicit and link to SSOTs (Tester chat mode and BDD instructions).
+PROMPTING: Reference, don't duplicate. Keep actions concrete for frontend.
+-->
+## Testing
+
+1. **SSOT References**
+	- Tester chat mode: `.github/chatmodes/Tester.chatmode.md`
+	- BDD tests instructions: `.github/instructions/bdd-tests.instructions.md`
+
+2. **Unit/UI Tests (default stack: Jest + Testing Library unless overridden)**
+	- Cover rendering, critical interactions (click, type, submit), and state transitions.
+	- Include accessibility assertions (roles/labels/name, focus management, keyboard nav).
+	- Assert async states: loading, success, and error paths; handle empty data gracefully.
+
+3. **E2E/UI Flows (optional, if project uses Playwright/Cypress)**
+	- Keep scenarios small and stable; tag appropriately (e.g., `@ui`, `@smoke`).
+	- Prefer testids sparingly; select by role/name first.
+
+4. **Coverage Policy**
+	- Follow central Quality & Coverage Policy in `.github/copilot-instructions.md#quality-policy`.
+	- Ensure hot paths and error paths are fully covered (100%).
 
 <!--
 SECTION PURPOSE: Keep apps fast and responsive.
