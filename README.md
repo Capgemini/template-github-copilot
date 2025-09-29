@@ -24,6 +24,7 @@ This repository is intended to help teams adopt Copilot best practices, understa
 
 ## How to get started
 
+
 1. Create a new repository using “Use this template” (or fork/clone).
 2. Review and adapt the example [chat modes](.github/chatmodes/README.md), [instructions](.github/instructions/README.md), and [prompts](.github/prompts/README.md).
 3. Read the project docs in [docs/README.md](docs/README.md).

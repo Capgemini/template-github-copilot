@@ -2,9 +2,8 @@
 applyTo: "**/*.java, **/*.py, **/*.cs"
 ---
 <!-- The above section is called 'frontmatter' and is used to define metadata for the document -->
-
 <!-- The main content of the markdown file starts here -->
-# Backend Instructions
+# Backend Development Guidelines
 
 ## General Guidelines
 
@@ -14,21 +13,7 @@ Follow idiomatic practices for the chosen programming language and framework. Pr
 - **Security**: Implement security best practices, such as input validation, parameterized queries (to prevent SQL injection), and proper authentication/authorization.
 - **Error Handling**: Implement robust error handling and logging to ensure system stability and ease of debugging.
 - **Configuration Management**: Externalize configuration from code. Use environment variables or configuration files. Do not commit secrets to version control.
-
-<a name="backend-architecture"></a>
-## Architecture & Structure
-
-Adopt a simple, layered architecture to keep boundaries clear and testable:
-- Entry (HTTP/CLI/Queue) → Controller/Handler → Service (business logic) → Repository (data access) → External systems.
-- Keep DTOs separate from domain models; map at edges.
-- Inject dependencies through constructors. Avoid singletons and global state.
-
-Language-specific notes:
-- Spring Boot: Controllers (`@RestController`) → Services (`@Service`) → Repos (`@Repository`). Use packages by feature when helpful.
-- Django: Views/ViewSets → Services (plain modules) → ORM Models/Managers. Keep fat models thin services as needed; avoid business logic in views.
-- ASP.NET Core: Controllers → Services (DI) → Repositories (EF Core). Prefer interfaces for services/repositories for testability.
-
-Testing guidance: unit-test services with fakes; integration-test controllers and repositories. See `.github/copilot-instructions.md#quality-policy` for coverage expectations.
+- **Testing**: Write unit tests for business logic and integration tests for critical paths. Aim for high test coverage, especially on new code.
 
 ## Language-Specific Guidelines
 
@@ -46,6 +31,73 @@ Testing guidance: unit-test services with fakes; integration-test controllers an
 4.  **Database Access**: Use Spring Data JPA for database interactions with repositories.
 5.  **REST APIs**: Use `@RestController` for creating RESTful services and DTOs (Data Transfer Objects) to decouple API contracts from domain models.
 6.  **Security**: Use Spring Security for authentication and authorization.
+
+### Python
+
+- **Dependency Management**: Use `pip` with `requirements.txt` or a tool like Poetry or Pipenv.
+- **Coding Style**: Follow PEP 8.
+- **Virtual Environments**: Always use a virtual environment (e.g., `venv`).
+
+#### Django
+
+- **Project Structure**: Follow the standard Django project structure (`manage.py`, project folder, app folders).
+- **ORM**: Use the Django ORM for database interactions.
+- **Settings**: Manage settings for different environments carefully (e.g., `settings/base.py`, `settings/dev.py`, `settings/prod.py`).
+- **Security**: Use Django's built-in security features (e.g., CSRF protection, XSS protection).
+
+#### Flask
+
+- **Project Structure**: Use Blueprints to organize larger applications.
+- **ORM**: Use SQLAlchemy with Flask-SQLAlchemy for database interactions.
+- **Configuration**: Use instance folders for configuration.
+
+### C#/.NET
+
+- **Project Structure**: Follow the standard .NET project structure.
+- **Dependency Management**: Use NuGet for package management.
+- **Coding Style**: Follow the Microsoft C# Coding Conventions.
+- **Async/Await**: Use `async` and `await` for non-blocking I/O operations.
+
+#### ASP.NET Core
+
+1.  **Configuration**: Use `appsettings.json` and environment-specific variants (`appsettings.Development.json`).
+2.  **Dependency Injection**: Use the built-in dependency injection container.
+3.  **ORM**: Use Entity Framework Core for database access.
+4.  **API Development**: Use controllers for API endpoints and follow RESTful principles.
+5.  **Security**: Use ASP.NET Core Identity for authentication and authorization.
+
+<!-- Removed duplicated placeholder sections to avoid conflicts; guidance above already covers Flask, Django, and ASP.NET Core. -->
+
+## API Development
+
+1. **Endpoint Design**: Design RESTful APIs with clear and consistent endpoint structures.
+2. **Request/Response Formats**: Follow the API guidelines for request/response formats (e.g., JSON).
+3. **Versioning**: Implement the API versioning strategy defined in the docs to ensure backward compatibility.
+
+## Performance Optimization
+
+1. **Caching**: Implement caching strategies to reduce database load and improve response times.
+2. **Database Optimization**: Optimize database queries and use indexing where appropriate.
+3. **Asynchronous Processing**: Use asynchronous processing for long-running tasks to improve API responsiveness.
+
+<a name="backend-architecture"></a>
+## Architecture & Structure
+
+Adopt a simple, layered architecture to keep boundaries clear and testable:
+- Entry (HTTP/CLI/Queue) → Controller/Handler → Service (business logic) → Repository (data access) → External systems.
+- Keep DTOs separate from domain models; map at edges.
+- Inject dependencies through constructors. Avoid singletons and global state.
+
+Framework-specific notes:
+- Spring Boot: Controllers (`@RestController`) → Services (`@Service`) → Repos (`@Repository`). Use packages by feature when helpful.
+- Django: Views/ViewSets → Services (plain modules) → ORM Models/Managers. Keep fat models thin services as needed; avoid business logic in views.
+- ASP.NET Core: Controllers → Services (DI) → Repositories (EF Core). Prefer interfaces for services/repositories for testability.
+
+Testing guidance: unit-test services with fakes; integration-test controllers and repositories. See `.github/copilot-instructions.md#quality-policy` for coverage expectations.
+
+<a name="backend-error-handling"></a>
+
+## Error Handling
 
 ##### Example: Global Exception Handler (Spring)
 ```java
@@ -136,22 +188,6 @@ app.UseExceptionHandler(appError =>
 });
 ```
 
-<!-- Removed duplicated placeholder sections to avoid conflicts; guidance above already covers Flask, Django, and ASP.NET Core. -->
-
-## API Development
-
-1. **Endpoint Design**: Design RESTful APIs with clear and consistent endpoint structures.
-2. **Request/Response Formats**: Follow the API guidelines for request/response formats (e.g., JSON).
-3. **Versioning**: Implement the API versioning strategy defined in the docs to ensure backward compatibility.
-
-Return consistent error shapes (code, message, correlationId) and map exceptions to appropriate status codes. Do not leak stack traces to clients.
-
-## Performance Optimization
-
-1. **Caching**: Implement caching strategies to reduce database load and improve response times.
-2. **Database Optimization**: Optimize database queries and use indexing where appropriate.
-3. **Asynchronous Processing**: Use asynchronous processing for long-running tasks to improve API responsiveness.
-
 <a name="backend-error-handling"></a>
 ## Error Handling
 
@@ -170,6 +206,8 @@ Return consistent error shapes (code, message, correlationId) and map exceptions
 	- .NET: `ILogger<T>` with scopes; OpenTelemetry exporters for traces/metrics.
 - Metrics: instrument hot paths, DB calls, external requests; standard RED/USE metrics.
 - Tracing: propagate trace headers (W3C TraceContext). Use OpenTelemetry SDKs where available.
+
+Return consistent error shapes (code, message, correlationId) and map exceptions to appropriate status codes. Do not leak stack traces to clients.
 
 Examples:
 ```java
@@ -201,4 +239,3 @@ using (logger.BeginScope(new Dictionary<string, object>{{"correlationId", cid}})
 References:
 - Branch/PR workflow and conventions: `.github/copilot-instructions.md`.
 - Coverage and critical-path rules: `.github/copilot-instructions.md#quality-policy`.
-
