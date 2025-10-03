@@ -9,6 +9,10 @@ This directory contains reusable prompt files that extend Copilot Chat with repe
 - [/write-docs](write-docs.prompt.md)
 - [/write-ears-spec](write-ears-spec.prompt.md)
 - [/write-prd](write-prd.prompt.md)
+- [/plan-onboard.prompt.md](plan-onboard.prompt.md)
+- [/plan-create.prompt.md](plan-create.prompt.md)
+- [/plan-update.prompt.md](plan-update.prompt.md)
+- [/plan-exec.prompt.md](plan-exec.prompt.md)
 
 ## How to use
 - In Copilot Chat, type the prompt name or pick it from the quick actions list.
