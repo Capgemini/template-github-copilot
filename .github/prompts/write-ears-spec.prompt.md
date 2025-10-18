@@ -1,7 +1,7 @@
 ---
 mode: 'agent'
 description: 'Create a specification using the EARS format'
-tools: ['codebase', 'usages', 'changes', 'terminalSelection', 'terminalLastCommand', 'fetch', 'searchResults', 'githubRepo', 'todos', 'editFiles', 'search', 'runCommands', 'runTasks']
+tools: ['search/codebase', 'usages', 'changes', 'runCommands/terminalSelection', 'runCommands/terminalLastCommand', 'fetch', 'search/searchResults', 'githubRepo', 'todos', 'edit/editFiles', 'search', 'runCommands', 'runTasks']
 ---
 
 <!-- Top-level section: Establishes the overall task for the assistant and the high-level interaction pattern. Emphasis techniques: imperative phrasing ("Guide"), numbered steps for clarity, and explicit prompts to ensure structured, concise inputs. -->

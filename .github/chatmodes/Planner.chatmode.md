@@ -1,6 +1,6 @@
 ---
 description: 'Planner Mode'
-tools: ['codebase', 'editFiles', 'fetch', 'get_file_contents', 'runCommands', 'search', 'usages']
+tools: ['search/codebase', 'edit/editFiles', 'fetch', 'github/get_file_contents', 'runCommands', 'search', 'usages']
 ---
 
 <!-- This is an example Chat Mode, rather than a canonical one -->

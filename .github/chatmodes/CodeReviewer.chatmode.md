@@ -1,6 +1,6 @@
 ---
 description: 'Code Reviewer Mode'
-tools: ['codebase', 'search', 'usages', 'problems', 'changes']
+tools: ['search/codebase', 'search', 'usages', 'problems', 'changes']
 ---
 
 <!-- This is an example Chat Mode, rather than a canonical one -->

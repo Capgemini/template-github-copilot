@@ -1,7 +1,7 @@
 ---
 mode: 'agent'
 description: 'Create a Product Requirements Document (PRD) using the repository PRD template and structured guidance for both humans and automation.'
-tools: ['codebase', 'usages', 'changes', 'editFiles', 'fetch', 'search', 'searchResults', 'runCommands', 'todos']
+tools: ['search/codebase', 'usages', 'changes', 'edit/editFiles', 'fetch', 'search', 'search/searchResults', 'runCommands', 'todos']
 ---
 
 <!-- Top-level purpose: Define the PRD creation task and guardrails. Techniques: clear title, imperative voice, and branch/filename conventions to guide edits. -->
