@@ -21,4 +21,3 @@ There are three examples of how to influence and use AI to write documentation i
 - [Custom chat modes](../.github/chatmodes/custom-mode.chatmode.md) — Preset conversational configurations that shape Copilot’s behavior and tone during interactive sessions and document generation.
 - [Instructions](../.github/instructions/docs.instructions.md) — Repository-specific rules and constraints (coding standards, workflow, style) that the AI must follow when producing content.
 - [Prompts](../.github/prompts/write-docs.prompt.md) — Reusable prompt templates for generating consistent artifacts (e.g., ADRs, docs, PRDs). See also [write-adr.prompt.md](../.github/prompts/write-adr.prompt.md) and [write-prd.prompt.md](../.github/prompts/write-prd.prompt.md).
-
