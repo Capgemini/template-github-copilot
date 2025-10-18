@@ -14,7 +14,7 @@ Replace all TODO items in `.github/copilot-instructions.md` with detailed, unamb
 
 ## 3. Current status (object)
 
-```
+```yaml
 owner: Stuart Williams <stuart@example.com>
 state: proposed
 last_updated: 2025-09-15
@@ -54,7 +54,7 @@ blockers: []
 
 ## 6. Scope (object with two arrays: in, out)
 
-```
+```yaml
 in:
 - Replace all 8 TODO items in .github/copilot-instructions.md
 - Create comprehensive branching strategy guidelines
@@ -132,7 +132,7 @@ The implementation will systematically replace each TODO item with comprehensive
 
 Based on the current `copilot-instructions.md` file, there are 8 distinct TODO items that fall into two main categories:
 
-**Category 1: Project Methodologies (7 items)**
+#### **Category 1: Project Methodologies (7 items)**
 
 1. Branching strategy and development workflow
 2. Short-lived branch requirements and PR process
@@ -142,7 +142,7 @@ Based on the current `copilot-instructions.md` file, there are 8 distinct TODO i
 6. XML reinforcement for branch/commit process
 7. Mermaid diagram for branch/commit process
 
-**Category 2: Coding Standards (1 item)** 8. General coding standards and references to project-specific guidelines
+#### **Category 2: Coding Standards (1 item)** 8. General coding standards and references to project-specific guidelines
 
 ### Implementation Strategy
 

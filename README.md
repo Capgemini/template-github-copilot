@@ -2,8 +2,8 @@
 
 Welcome! This repository is a GitHub Template created by Capgemini. It provides practical, portable, and useful examples of GitHub Copilot configuration for real-world projects.
 
-
 ## Who this is for
+
 - Developers and teams adopting AI-assisted development
 - Project and technical leads seeking guidance on best practices
 - AI agents (including GitHub Copilot) needing repository context
@@ -13,10 +13,10 @@ Welcome! This repository is a GitHub Template created by Capgemini. It provides 
 This repository is intended to help teams adopt Copilot best practices, understand configuration options, and accelerate AI-powered development. It contains:
 
 - Working Copilot configurations with examples:
-    - Example [Chat modes](.github/chatmodes/README.md)
-    - Example [Instructions](.github/instructions/README.md)
-    - Example [Prompts](.github/prompts/README.md)
-    - A GitHub Copilot [configuration overview](.github/README.github.md)
+  - Example [Chat modes](.github/chatmodes/README.md)
+  - Example [Instructions](.github/instructions/README.md)
+  - Example [Prompts](.github/prompts/README.md)
+- A GitHub Copilot [configuration overview](.github/README.github.md)
 - Clear documentation to understand, configure, and extend Copilot
 - Examples of prompting techniques for each custom configuration
 - A ready-to-use template to bootstrap new projects (“Use this template” on GitHub)
@@ -24,11 +24,9 @@ This repository is intended to help teams adopt Copilot best practices, understa
 
 ## How to get started
 
-
 1. Create a new repository using “Use this template” (or fork/clone).
 2. Review and adapt the example [chat modes](.github/chatmodes/README.md), [instructions](.github/instructions/README.md), and [prompts](.github/prompts/README.md).
 3. Read the project docs in [docs/README.md](docs/README.md).
-
 
 <!-- Replace this paragraph with hints on finding information elsehwere in the repository -->
 
@@ -47,7 +45,6 @@ Reuse and reference instructions files in your prompt files and chat modes to ke
 - Include a brief test plan or example queries that validate the instruction works as intended.
 - Avoid embedding secrets or environment-specific data; reference where secure configs live (e.g., repo secrets, vault).
 - When in doubt, be explicit: busy users prefer exact commands/phrases to adapt rather than broad theory.
-
 
 ### 1. Custom Chat Modes
 
@@ -110,7 +107,7 @@ The repository enforces trunk-based development with:
 
 All commits must follow conventional commit format:
 
-```
+```text
 <type>: <subject>
 
 [optional body]
@@ -151,11 +148,9 @@ When adding new chat modes, prompts, or instructions:
 
 You can find more about how to [customise and extend Github Copilot](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions?tool=vscode), or how to customise Copilot behaviour in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/overview), and other IDEs such as [Jetbrains](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions?tool=jetbrains), [Eclipse](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions?tool=eclipse), and [XCode](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions?tool=xcode).
 
-
 You can find more examples of Copilot configuration in the [Awesome Copilot repository on Github.com](https://github.com/github/awesome-copilot/tree/main).
 
-
-# Document Reference Hierarchy
+## Document Reference Hierarchy
 
 This diagram shows how documents reference each other across the repository, mapping the interconnections between configuration files, instructions, prompts, documentation, and plans.
 
@@ -171,7 +166,7 @@ flowchart LR
     %% GitHub Configuration (Top Center)
     subgraph GITHUB [".github/ Configuration"]
         direction TB
-        
+
         subgraph CHATMODES ["💬 Chat Modes"]
             DOC["Documentation"]
             PLAN["Planner"]
@@ -179,14 +174,14 @@ flowchart LR
             CR["CodeReview"]
             TEST["Testing"]
         end
-        
+
         subgraph INSTRUCTIONS ["📋 Instructions"]
             DOCINST["docs.instructions"]
             BACKEND["backend.instructions"]
             FRONTEND["frontend.instructions"]
             BDD["bdd-tests.instructions"]
         end
-        
+
         subgraph PROMPTS ["🎯 Prompts"]
             DOC_PROMPT["write-docs"]
             ADR_PROMPT["write-adr"]
@@ -199,13 +194,13 @@ flowchart LR
     %% Content Directories (Right)
     subgraph CONTENT ["📁 Content & Output"]
         direction TB
-        
+
         subgraph DOCS ["📖 Documentation"]
             ADR_TEMPLATE["adr-template.md"]
             PRD_TEMPLATE["prd-template.md"]
             CODE_REVIEW["code-review-guidelines.md"]
         end
-        
+
         subgraph PLANS ["📅 Plans"]
             PLAN_TEMPLATE["plan-template.md"]
             TODO["TODO.md"]
@@ -222,10 +217,10 @@ flowchart LR
     DOC ==>|"uses templates"| ADR_TEMPLATE
     DOC ==>|"uses templates"| PRD_TEMPLATE
     DOC ==>|"follows rules"| DOCINST
-    
+
     PLAN ==>|"uses template"| PLAN_TEMPLATE
     PLAN ==>|"manages"| TODO
-    
+
     DEV -.->|"references"| DOCS
     DEV -.->|"references"| PLANS
 
@@ -263,60 +258,67 @@ flowchart LR
 ## Key Reference Patterns
 
 ### Central Configuration Hub
+
 - `.github/copilot-instructions.md` serves as the primary configuration document, referencing most instruction files and core documentation
 - `AGENTS.md` provides repository-wide context and references key directories and processes
 
 ### Documentation Workflow
+
 - `Documentation.chatmode.md` heavily references documentation instructions and templates
 - `docs.instructions.md` defines standards for all documentation types and their storage locations
 - Prompt files like `write-adr.prompt.md` and `write-prd.prompt.md` reference their respective templates and directories
 
 ### Planning Integration
+
 - `Planner.chatmode.md` integrates with the plans structure and references the plan template
 - Plans reference core configuration files and maintain the TODO workflow
 
 ### Cross-Cutting Concerns
+
 - Engineering guidelines (`code-review-guidelines.md`, `pull-request-guidelines.md`) are referenced by the main configuration
 - Templates (`adr-template.md`, `prd-template.md`) are referenced by both instructions and prompts
 - Directory structures are consistently referenced across multiple configuration files
 
 This hierarchy shows how the repository maintains consistency through strategic cross-referencing, with clear patterns for documentation workflows, planning processes, and configuration management.
- 
+
 ## Appendix: SSOT Source Map
 
 Authoritative single sources of truth (SSOT) for key policies and templates. Prefer linking to these instead of duplicating content.
 
 - Core policies and workflow
-    - Copilot instructions (SSOT): `.github/copilot-instructions.md`
-        - Quality & Coverage Policy: `.github/copilot-instructions.md#quality-policy`
+  - Copilot instructions (SSOT): `.github/copilot-instructions.md`
+    - Quality & Coverage Policy: `.github/copilot-instructions.md#quality-policy`
 
-        ### CI Coverage Enforcement (template)
+### CI Coverage Enforcement (template)
 
-        This repo includes a minimal coverage enforcement workflow (`.github/workflows/coverage.yml`) and script (`scripts/enforce-coverage.js`) aligned with the Quality & Coverage Policy:
-        - Global ≥ 90%; core modules ≥ 95%; integrations ≥ 85%; critical/hot/error/security paths 100%.
-        - The sample job looks for a Jest `coverage/coverage-summary.json`. Adapt the test step for your stack (e.g., Python `coverage.json`, Java `jacoco.xml` converted to JSON) and point the script to the generated summary.
-        - Branching & Workflow: see "Project Methodologies" in the same file
-        - Naming & Commit Conventions: see corresponding sections in the same file
+This repo includes a minimal coverage enforcement workflow (`.github/workflows/coverage.yml`) and script (`scripts/enforce-coverage.js`) aligned with the Quality & Coverage Policy:
+
+- Global ≥ 90%; core modules ≥ 95%; integrations ≥ 85%; critical/hot/error/security paths 100%.
+- The sample job looks for a Jest `coverage/coverage-summary.json`. Adapt the test step for your stack (e.g., Python `coverage.json`, Java `jacoco.xml` converted to JSON) and point the script to the generated summary.
+- Branching & Workflow: see "Project Methodologies" in the same file
+- Naming & Commit Conventions: see corresponding sections in the same file
+
 - Engineering guidelines
-    - Code review checklist (SSOT): `docs/engineering/code-review-guidelines.md#code-review-checklist`
-    - Pull request guidelines: `docs/engineering/pull-request-guidelines.md`
+  - Code review checklist (SSOT): `docs/engineering/code-review-guidelines.md#code-review-checklist`
+  - Pull request guidelines: `docs/engineering/pull-request-guidelines.md`
 - Documentation
-    - Docs authoring rules (SSOT): `.github/instructions/docs.instructions.md`
-    - Documentation flow anchor: `.github/instructions/docs.instructions.md#documentation-process-flow`
+  - Docs authoring rules (SSOT): `.github/instructions/docs.instructions.md`
+  - Documentation flow anchor: `.github/instructions/docs.instructions.md#documentation-process-flow`
 - Testing
-    - BDD feature guidance (SSOT): `.github/instructions/bdd-tests.instructions.md`
-    - Tester chat mode (enforces policy): `.github/chatmodes/Tester.chatmode.md`
+  - BDD feature guidance (SSOT): `.github/instructions/bdd-tests.instructions.md`
+  - Tester chat mode (enforces policy): `.github/chatmodes/Tester.chatmode.md`
 - Backend
-    - Backend instructions (SSOT): `.github/instructions/backend.instructions.md`
-    - Architecture: `.github/instructions/backend.instructions.md#backend-architecture`
-    - Error handling: `.github/instructions/backend.instructions.md#backend-error-handling`
-    - Observability: `.github/instructions/backend.instructions.md#backend-observability`
-    - Security: `.github/instructions/backend.instructions.md#backend-security`
+  - Backend instructions (SSOT): `.github/instructions/backend.instructions.md`
+  - Architecture: `.github/instructions/backend.instructions.md#backend-architecture`
+  - Error handling: `.github/instructions/backend.instructions.md#backend-error-handling`
+  - Observability: `.github/instructions/backend.instructions.md#backend-observability`
+  - Security: `.github/instructions/backend.instructions.md#backend-security`
 - Planning
-    - Plan template (SSOT): `plans/plan-template.md`
-    - Small plan example: `plans/examples/plan-small.md`
-    - TODO (work queue): `plans/TODO.md`
+  - Plan template (SSOT): `plans/plan-template.md`
+  - Small plan example: `plans/examples/plan-small.md`
+  - TODO (work queue): `plans/TODO.md`
 
 Notes:
+
 - Chat modes and prompts should reference these SSOT files. Avoid duplicating numeric thresholds, templates, or process steps in multiple places.
 - CI tasks (if added) should validate adherence to SSOT anchors where practical.

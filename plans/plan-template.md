@@ -3,12 +3,12 @@
 This document is a precise, unambiguous template for writing project or feature plans. It is written so an AI (or a human) can fill every section consistently. For each field the expected data type, format, and example are provided. Use the exact headings below and do not remove them. If a field does not apply, write "N/A".
 
 > Conventions:
-
-- Dates: use ISO 8601 (YYYY-MM-DD). Example: `2025-09-11`.
-- People: use full name and email in angle brackets. Example: `Stuart Williams <stuart@example.com>`.
-- Estimates: use a relative complexity scale only (no time). Allowed values: `XS`, `S`, `M`, `L`, `XL`.
-- Links: use full absolute URLs.
-- Limits: where a max length is specified, do not exceed it.
+>
+> - Dates: use ISO 8601 (YYYY-MM-DD). Example: `2025-09-11`.
+> - People: use full name and email in angle brackets. Example: `Stuart Williams <stuart@example.com>`.
+> - Estimates: use a relative complexity scale only (no time). Allowed values: `XS`, `S`, `M`, `L`, `XL`.
+> - Links: use full absolute URLs.
+> - Limits: where a max length is specified, do not exceed it.
 
 ---
 
@@ -31,7 +31,7 @@ This document is a precise, unambiguous template for writing project or feature 
 
 Example:
 
-```
+```yaml
 owner: Stuart Williams <stuart@example.com>
 state: in-progress
 last_updated: 2025-09-11
@@ -43,7 +43,7 @@ blockers: ["Security review pending", "Key vault access"]
 - Each objective is a short sentence describing an outcome (not an activity).
 - Must be measurable where possible.
 - Example:
-  1.  `Migrate 100% of active user logins to OAuth2 by 2026-01-31`.
+  1. `Migrate 100% of active user logins to OAuth2 by 2026-01-31`.
 
 ## 5. Success criteria (list; each item must be measurable and include acceptance criteria)
 
@@ -66,7 +66,7 @@ blockers: ["Security review pending", "Key vault access"]
 
 Example:
 
-```
+```yaml
 in:
 - Replace API endpoints `/auth/*`
 - Migrate user database tokens to new format

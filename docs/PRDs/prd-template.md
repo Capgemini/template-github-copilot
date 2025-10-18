@@ -25,11 +25,11 @@
 
 ### 3. Stakeholders
 
-| Name/Group             | Role/Responsibility | Contact/Notes     |
-| ---------------------- | ------------------- | ----------------- |
-| Example: Product Owner | Decision-maker      | email@example.com |
-| Example: Engineering   | Implementation Lead |                   |
-| Example: QA            | Reviewer/Tester     |                   |
+| Name/Group             | Role/Responsibility | Contact/Notes       |
+| ---------------------- | ------------------- | ------------------- |
+| Example: Product Owner | Decision-maker      | `email@example.com` |
+| Example: Engineering   | Implementation Lead |                     |
+| Example: QA            | Reviewer/Tester     |                     |
 
 List all main stakeholders, their roles, and relevant contact or notes. Add/remove rows as needed.
 

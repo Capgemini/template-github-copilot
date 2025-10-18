@@ -4,7 +4,7 @@ This directory contains design documents that explain how the system is structur
 
 ## Index
 
- - (replace with links to design docs)
+- (replace with links to design docs)
 
 ## Design Documents
 
