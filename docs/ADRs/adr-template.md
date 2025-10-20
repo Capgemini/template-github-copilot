@@ -1,4 +1,5 @@
 ---
+title: "ADR-NNNN: [Decision Title]"
 status: "Proposed"
 date: "YYYY-MM-DD"
 authors: "[Stakeholder Names/Roles]"
