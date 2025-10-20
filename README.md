@@ -148,7 +148,7 @@ When adding new chat modes, prompts, or instructions:
 
 You can find more about how to [customise and extend GitHub Copilot](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions?tool=vscode), or how to customise Copilot behaviour in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/overview), and other IDEs such as [Jetbrains](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions?tool=jetbrains), [Eclipse](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions?tool=eclipse), and [XCode](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions?tool=xcode).
 
-You can find more examples of Copilot configuration in the [Awesome Copilot repository on Github.com](https://github.com/github/awesome-copilot/tree/main).
+You can find more examples of Copilot configuration in the [Awesome Copilot repository on GitHub.com](https://github.com/github/awesome-copilot/tree/main).
 
 ## Document Reference Hierarchy
 
