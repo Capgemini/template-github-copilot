@@ -144,10 +144,12 @@ Based on the current `copilot-instructions.md` file, there are 8 distinct TODO i
 
 #### **Category 2: Coding Standards (1 item)**
 
-8. General coding standards and references to project-specific guidelines
+1. General coding standards and references to project-specific guidelines
+
 ### Implementation Strategy
 
-**1. Branching Strategy and Development Workflow**
+#### 1. Branching Strategy and Development Workflow
+
 Will implement a comprehensive section defining:
 
 - Trunk-based development principles with specific requirements
@@ -155,7 +157,8 @@ Will implement a comprehensive section defining:
 - Integration with existing CI/CD practices
 - Enforcement through XML blocks with `<REQUIREMENT>` tags
 
-**2. Commit and PR Conventions**
+#### 2. Commit and PR Conventions
+
 Will create detailed specifications for:
 
 - Conventional commit format with specific patterns
@@ -163,7 +166,8 @@ Will create detailed specifications for:
 - Required PR content and review processes
 - Automated enforcement guidelines
 
-**3. Reinforcement Techniques Implementation**
+#### 3. Reinforcement Techniques Implementation
+
 The plan employs three primary reinforcement techniques:
 
 **XML Reinforcement Blocks**: Critical instructions will be wrapped in semantic XML tags:
