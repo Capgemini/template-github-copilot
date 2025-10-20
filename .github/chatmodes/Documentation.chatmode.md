@@ -1,6 +1,6 @@
 ---
 description: 'Documentation Mode'
-tools: ['codebase', 'search', 'editFiles', 'usages', 'problems', 'changes', 'fetch']
+tools: ['search/codebase', 'search', 'edit/editFiles', 'usages', 'problems', 'changes', 'fetch']
 ---
 
 <!-- This is an example Chat Mode, rather than a canonical one -->

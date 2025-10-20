@@ -1,6 +1,6 @@
 ---
 description: "Instructions for writing coding documentation"
-tools: ['codebase', 'editFiles', 'fetch']
+tools: ['search/codebase', 'edit/editFiles', 'fetch']
 ---
 <!-- Top-level section: Defines the documentation-writing task and the step-by-step workflow the assistant should follow. Techniques: imperative verbs, numbered list for clear sequencing, and explicit prompts to elicit scope, audience, and content. -->
 # Write Documentation

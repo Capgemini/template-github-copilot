@@ -3,22 +3,26 @@
 This file provides general instructions and context for all AI agents working in this repository (not just Copilot).
 
 **Repository Overview:**
+
 - This is a GitHub Template created by Capgemini's AI & Software Engineering experts.
 - It contains practical examples of Copilot and agent configuration, plus educational resources.
 
 **For Humans:**
+
 - See [the main project README](./README.md) for a general project overview and orientation.
 
 **For AI Agents:**
+
 - Use this file to understand the project’s goals, structure, and best practices.
 - Reference configuration and documentation files for deeper context.
 - For Copilot-specific instructions, see `.github/copilot-instructions.md`.
 - Authoritative workflow rules (branching, commits, PRs, coverage policy) live in `.github/copilot-instructions.md` — link to it instead of duplicating.
 - Other AI Agents should consider `.github/copilot-instructions.md` as informative, but not supersede their own custom instruction files, if present.
 - It's critical to stop and alert the user if an AI finds conflicting instructions.
-- The assistant must never use emoji's to decorate its responses to the user
+- The assistant must never use emojis to decorate its responses to the user
 
 **Repository Structure for Docs and Plans:**
+
 - Documentation is stored in the `docs/` directory. This includes general documentation, architectural decision records (ADRs), and product requirements documents (PRDs).
 - Project plans and related planning materials are stored only in the `plans/` directory.
 - Strictly follow the instructions on plan creation and management that are found in the `plans/README.md`.

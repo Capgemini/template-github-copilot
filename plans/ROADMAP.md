@@ -12,12 +12,14 @@ Usage: Add one badge per item to convey current status. Optionally include an ow
 Example: `Q4 2025 — Platform auth hardening` ![In Progress](https://img.shields.io/badge/status-In%20Progress-blue) ![Owner](https://img.shields.io/badge/owner-Platform%20Team-informational)
 
 ## Milestones (Upcoming)
+
 - Qx YYYY — Milestone name
-	- Goals
-	- Key deliverables
-	- Owners
+  - Goals
+  - Key deliverables
+  - Owners
 
 ## Milestones (Completed)
+
 - Qx YYYY — Milestone name
-	- Outcomes
-	- Links to PRs/Docs
+  - Outcomes
+  - Links to PRs/Docs

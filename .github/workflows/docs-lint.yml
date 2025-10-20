@@ -15,6 +15,7 @@ jobs:
         with:
           globs: |
             **/*.md
+            !.github/**/*.md
           config: .markdownlint.jsonc
 
   link-check:
