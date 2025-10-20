@@ -28,7 +28,7 @@ This repository is intended to help teams adopt Copilot best practices, understa
 2. Review and adapt the example [chat modes](.github/chatmodes/README.md), [instructions](.github/instructions/README.md), and [prompts](.github/prompts/README.md).
 3. Read the project docs in [docs/README.md](docs/README.md).
 
-<!-- Replace this paragraph with hints on finding information elsehwere in the repository -->
+<!-- Replace this paragraph with hints on finding information elsewhere in the repository -->
 
 ## Best Practices
 
