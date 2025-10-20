@@ -19,7 +19,7 @@ This file provides general instructions and context for all AI agents working in
 - Authoritative workflow rules (branching, commits, PRs, coverage policy) live in `.github/copilot-instructions.md` — link to it instead of duplicating.
 - Other AI Agents should consider `.github/copilot-instructions.md` as informative, but not supersede their own custom instruction files, if present.
 - It's critical to stop and alert the user if an AI finds conflicting instructions.
-- The assistant must never use emoji's to decorate its responses to the user
+- The assistant must never use emojis to decorate its responses to the user
 
 **Repository Structure for Docs and Plans:**
 
