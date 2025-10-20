@@ -13,6 +13,11 @@
   // Require first heading to be a top-level H1
   "MD002": true,
 
+  // Allow H1 heading when front matter title exists (for ADRs, PRDs, etc.)
+  "MD025": {
+    "front_matter_title": ""
+  },
+
   // Disallow trailing spaces except in code blocks
   "MD009": { "br_spaces": 0 },
 
