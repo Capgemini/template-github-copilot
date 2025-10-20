@@ -142,8 +142,9 @@ Based on the current `copilot-instructions.md` file, there are 8 distinct TODO i
 6. XML reinforcement for branch/commit process
 7. Mermaid diagram for branch/commit process
 
-#### **Category 2: Coding Standards (1 item)** 8. General coding standards and references to project-specific guidelines
+#### **Category 2: Coding Standards (1 item)**
 
+8. General coding standards and references to project-specific guidelines
 ### Implementation Strategy
 
 **1. Branching Strategy and Development Workflow**
