@@ -83,11 +83,13 @@ Major changes to existing configurations should be discussed in an issue before 
 ### 2. Create an Issue (Recommended)
 
 For significant contributions:
+
 1. Create an issue describing your proposed contribution
 2. Wait for feedback from maintainers
 3. Proceed once you have general agreement
 
 For minor fixes (typos, small corrections):
+
 - You can proceed directly to creating a pull request
 
 ### 3. Development Workflow
@@ -103,6 +105,7 @@ git checkout -b <type>/<brief-description>
 ```
 
 **Branch Types**:
+
 - `feature/` - New features or enhancements
 - `fix/` - Bug fixes
 - `docs/` - Documentation updates
@@ -111,6 +114,7 @@ git checkout -b <type>/<brief-description>
 - `chore/` - Maintenance tasks
 
 **Examples**:
+
 - `feature/add-security-chatmode`
 - `fix/typo-in-developer-mode`
 - `docs/improve-contributing-guide`
@@ -120,7 +124,8 @@ git checkout -b <type>/<brief-description>
 1. **Keep changes focused**: One logical change per pull request
 2. **Small commits**: Make frequent, small commits with clear messages
 3. **Follow conventions**: Use conventional commit format:
-   ```
+
+   ```text
    <type>: <subject>
    
    [optional body]
@@ -131,6 +136,7 @@ git checkout -b <type>/<brief-description>
 **Commit Types**: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 
 **Examples**:
+
 - `feat: Add security-focused chat mode with threat modeling`
 - `fix: Correct typo in Developer.chatmode.md`
 - `docs: Improve explanation of prompting techniques`
@@ -149,6 +155,7 @@ DESIGN RATIONALE: [Why this approach was chosen]
 ```
 
 **Example**:
+
 ```markdown
 <!--
 PURPOSE: Ensure consistent error handling across the codebase
@@ -220,7 +227,7 @@ When contributing, consider these priority levels:
 
 Familiarize yourself with the repository organization:
 
-```
+```text
 .github/
 ├── chatmodes/          # Custom chat mode definitions
 ├── instructions/       # Domain-specific instruction files
@@ -263,6 +270,7 @@ plans/                 # Project planning documents
 ## Attribution
 
 We appreciate all contributors! Your contributions will be recognized in:
+
 - Git commit history
 - Release notes (for significant contributions)
 - GitHub's contributor tracking
@@ -274,6 +282,7 @@ By contributing, you agree that your contributions will be licensed under the sa
 ## Questions?
 
 If you have questions about contributing, please:
+
 1. Check this guide and the referenced SSOT documents
 2. Review existing contributions for examples
 3. Open an issue with your question
