@@ -141,7 +141,6 @@ When adding new chat modes, prompts, or instructions:
 
 ## Where to find more information
 
-- See `AGENTS.md` for general AI agent instructions and project context
 - See `.github/copilot-instructions.md` for Copilot-specific rules and configuration
 - See `CONTRIBUTING.md` for guidelines on contributing to this repository
 
@@ -160,7 +159,6 @@ flowchart LR
     %% Core Configuration Hub (Left)
     subgraph CONFIG ["🏠 Core Configuration"]
         CI["copilot-instructions.md"]
-        AGENTS["AGENTS.md"]
         README["README.md"]
     end
 
@@ -261,7 +259,6 @@ flowchart LR
 ### Central Configuration Hub
 
 - `.github/copilot-instructions.md` serves as the primary configuration document, referencing most instruction files and core documentation
-- `AGENTS.md` provides repository-wide context and references key directories and processes
 
 ### Documentation Workflow
 

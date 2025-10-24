@@ -80,7 +80,7 @@ Bad:  # Architecture
 ## Best practices
 
 - Keep instruction files focused (single responsibility). Prefer multiple small files over one large file.
-- Cross-reference `AGENTS.md` and `.github/copilot-instructions.md` for repository-wide policies.
+- Cross-reference `.github/copilot-instructions.md` for repository-wide policies.
 - Use examples liberally — AI systems map rules to examples well.
 
 ## Official docs

@@ -42,6 +42,18 @@ This creates a self-documenting system for understanding how AI instructions wor
 ==============================================================================
 -->
 
+**CRITICAL REQUIREMENTS**
+- AI assistants must _never_ remove HTML comments explaining the purpose and design of each section.
+- HTML comments provide essential context for understanding the instructional design and MUST remain intact.
+
+<CRIITICAL_REQUIREMENT type="MANDATORY">
+  <HTML_COMMENT presence="REQUIRED">
+    AUDIENCE: Primarily humans, but applicable to all AI coding assistants
+    DESIGN PHILOSOPHY: Maximum clarity and comprehensiveness through clear explanations
+    PURPOSE: Explain the instructional design, reinforcement techniques, and compliance mechanisms used in this section
+   </HTML_COMMENT>
+</CRITICAL_REQUIREMENT>
+
 **Audience:** Primarily GitHub Copilot. This file provides Copilot-specific instructions and configuration for this repository.
 
 **Repository Context:**
@@ -50,7 +62,6 @@ This repository is a GitHub Template created by Capgemini's AI & Software Engine
 **Copilot Guidance:**
 - Follow the configuration and best practices outlined here when assisting in this repository.
 - Reference `README.md` for general orientation and project goals.
-- Reference `AGENTS.md` for broader AI agent instructions and context.
 
 <!--
 ==============================================================================

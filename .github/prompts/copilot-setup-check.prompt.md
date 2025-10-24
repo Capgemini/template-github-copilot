@@ -13,7 +13,6 @@ Perform a comprehensive evaluation of the repository's GitHub Copilot and AI age
 ## Evaluation Scope
 
 This evaluation will assess:
-- **AGENTS.md** - General AI agent instructions and repository context
 - **.github/copilot-instructions.md** - Copilot-specific configuration and guidelines
 - **.github/chatmodes/** - Custom conversational behaviors and specialized modes
 - **.github/prompts/** - Reusable prompt templates and slash commands
@@ -41,18 +40,23 @@ This evaluation will assess:
 
 ### Phase 1: Core Files Assessment
 
-1. **Check AGENTS.md existence and quality**
+1. **For each file type, check existence and quality**
    - Verify presence and structure
    - Assess clarity of repository context
    - Evaluate AI agent guidance completeness
    - Check for conflicting instructions warning mechanisms
+   - Verify effectiveness of XML semantic tags reinforcing critical requirements
+   - Suggest improvements for clarity and completeness
+   - Suggest enhancements for maintainability and organization
+   - Suggest additions for missing best practices
+   - Suggest removal of redundant or conflicting content
+   - Suggest reinforcements (e.g. XML, Mermaid) for critical policies
 
 2. **Evaluate .github/copilot-instructions.md**
    - Verify comprehensive project methodology coverage
    - Assess branching strategy and workflow definitions
    - Check commit message and naming conventions
-   - Evaluate coding standards and quality requirements
-   - Verify XML semantic tags for critical requirements
+   - Evaluate generic coding standards and quality requirements
 
 ### Phase 2: Advanced Configuration Review
 
@@ -61,18 +65,23 @@ This evaluation will assess:
    - Assess relevance to project needs
    - Check for mode-specific optimization
    - Evaluate documentation quality
+   - Evaluate conflicts with core instructions, custom instructions (per file type), or custom prompts
 
 4. **Review prompt templates**
    - Inventory available slash commands
    - Assess prompt structure and parameterization
    - Check tool integration and capability coverage
    - Evaluate reusability and maintenance
+   - Evaluate conflicts with core instructions, custom instructions (per file type), or custom chatmodes
 
 5. **Examine instruction files**
    - Catalog language/domain-specific instructions
-   - Assess coverage of technology stack
+   - Assess coverage of technology stack and frameworks
+   - Evaluate clarity and actionability of language/framework specific instructions
    - Check alignment with project requirements
    - Evaluate specificity and actionability
+   - Evaluate specific coding standards and quality requirements
+   - Evaluate conflicts with core instructions, custom chatmodes, or custom prompts
 
 ### Phase 3: Integration and Optimization
 6. **Repository structure alignment**

@@ -29,7 +29,6 @@ Key SSOT anchors:
 
 See also:
 - Project overview in [README.md](../README.md)
-- Agent context in [AGENTS.md](../AGENTS.md)
 
 ### Custom Chat Modes
 
