@@ -3,6 +3,17 @@ mode: 'agent'
 description: 'Update action plan with new issue details, marks resolved questions and updates action plan steps as needed.'
 tools: ['codebase', 'search', 'searchResults', 'changes', 'findTestFiles', 'terminalSelection', 'terminalLastCommand', 'editFiles', 'fetch', 'runCommands']
 ---
+
+<!-- Plan update document is a part of Onboard, Plan and Execute method applicable for software engineering tasks using AI Agent. 
+
+* Its goal is to refine action plan document with answers to open questions, additional specifications, acceptance criteria, etc. You should always use this prompt to update the plan with relevant content.
+
+* Recommended models: Claude Sonnet 4+
+
+* How to use it: agent mode, choose one of the recommended models, launch prompt via `/plan-update <additional spec>`. Provide additional information as a parameter, i.e.: `/plan-update Answer to question 3 is...`
+
+-->
+
 You are an experienced software developer tasked with creating an action plan provided as ${file} to address an issue. Your plan is already generated and attached to this conversation, but you want to enhance it with additional information that was missing once plan was first created. Your goal is to produce a comprehensive, step-by-step plan that will guide the resolution of this issue.
 
 First, review the following information:

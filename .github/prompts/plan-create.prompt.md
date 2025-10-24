@@ -3,6 +3,18 @@ mode: 'agent'
 description: 'Plan feature implementation or bug fix and store it in a markdown file in the .ai folder'
 tools: ['codebase', 'search', 'searchResults', 'changes', 'findTestFiles', 'terminalSelection', 'terminalLastCommand', 'editFiles', 'fetch', 'runCommands']
 ---
+
+<!-- Create action plan prompt is a part of Onboard, Plan and Execute method applicable for software engineering tasks using AI Agent. 
+
+* Its goal is to generate action plan document based on a feature/requirement description. In result, plan will contain elaboration on purpose, list of self reflecting and open questions (open questions should be answered using `plan-update` prompt). Plan should be reviewed and refined, also via `plan-update` prompt).
+
+* Recommended models: Claude Sonnet 4+
+
+* How to use it: use agent mode, choose one of the recommended models, launch prompt via `/plan-create <requirement specification>`. Pass brief requirement spefication as a parameter to the prompt.
+
+DISCLAIMER: this prompt is derived from 10xdevs training (https://www.10xdevs.pl/)
+-->
+
 You are an experienced software developer tasked with creating an action plan to address an issue. Your goal is to produce a comprehensive, step-by-step plan that will guide the resolution of this issue.
 
 First, review the following information:
@@ -24,6 +36,7 @@ Your task is to create an action plan document in Markdown format. Follow these 
 5. Next Steps: Outline the next steps for addressing this issue, including specific actions for logging and debugging. Provide a clear, actionable plan. Number each step and provide a brief rationale for why it's necessary.
 
 </action_plan_development>
+
 
 After completing your analysis, create a Markdown document with the following structure:
 ```markdown

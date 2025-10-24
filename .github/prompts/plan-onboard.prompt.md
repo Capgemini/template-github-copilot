@@ -4,25 +4,45 @@ description: 'Generate project onboarding document from provided codebase, GIT h
 tools: ['codebase', 'search', 'searchResults', 'changes', 'editFiles', 'runCommands', 'runTests', 'findTestFiles', 'testFailure', 'fetch']
 ---
 
+<!-- Onboarding prompt is a part of Onboard, Plan and Execute method applicable for software engineering tasks using AI Agent. 
+
+* Its goal is to generate onboarding document that describes project purpose, history, and relevant parts.
+
+* Recommended models: Claude Sonnet 4+
+
+* When to use: this prompt should be used at least once, initially, to create `onboarding.md` file to be stored in GIT repo. After first generation, onboarding document should be mentioned in `copilot-instructions.md` via reference: `.ai/onboarding.md` to help the agent to understand the project better.
+
+* How to use it: use agent mode, choose one of the recommended models, launch prompt via `/plan-onboard`. No additional parameters needed.
+
+* Frequency of document regeneration: depending on project dynamics, one time per quarter is resonable baseline, to be adjusted subsequently.
+
+DISCLAIMER: this prompt is derived from 10xdevs training (https://www.10xdevs.pl/)
+ -->
+
+<!-- Top level prompt with role playing and general task definition. -->
 You are an AI assistant tasked with onboarding a new developer to a big project. Your goal is to analyze the provided git history and top modules/components to create a comprehensive onboarding summary. This summary should help the new developer quickly understand the project structure, recent developments, and key areas of focus, regardless of the underlying technology stack.
 
 First, review the following information:
 
+<!-- Sets up a scope for onboarding, in this case we use GIT history to build a "heat map" of frequently modified modules. These will be analyzed first. Play with CLI parameters (like -First <n> to change the limit). You can also replace GIT CLI with static references, if you don't want to use heat map.-->
 <top_modules>
 {{top-modules}} - use GIT to get the most frequently edited modules/packages/directories in the project; example: 
 `git log --format=format: --name-only | Where-Object { $_ -ne "" } | ForEach-Object { Split-Path -Path $_ -Parent | Where-Object { $_ -ne "" } } | Group-Object | Sort-Object -Property Count -Descending | Select-Object -First 10 | Format-Table -Property Name, Count -AutoSize`
 </top_modules>
 
+<!-- Sets up a scope for onboarding, in this case we use GIT history to build a "heat map" of frequently modified files. These will be analyzed first. Play with CLI parameters (like -First <n> to change the limit). You can also replace GIT CLI with static references, if you don't want to use heat map.-->
 <top_files>
 {{top-files}} - use GIT to get the most frequently edited files in the project; example:
 `git log --since="1 year ago" --format=format: --name-only | Where-Object { $_ -ne "" } | Group-Object | Sort-Object -Property Count -Descending | Select-Object -First 20 | Format-Table -Property Name, Count -AutoSize`
 </top_files>
 
+<!-- Gathers information for most active GIT contributors. Play with CLI parameters (like -First <n> to change the limit). You can also replace GIT CLI with static references, if you don't want to use heat map. -->
 <top_contributors>
 {{top-contributors}} - use GIT to get the most active contributors in the project; example:
 `git log --format='%an' | Group-Object | Sort-Object -Property Count -Descending | Select-Object -First 10 | Format-Table -Property Name, Count -AutoSize`
 </top_contributors>
 
+<!-- Specify how to use gathered historical information. This excercise enables reasoning on purpose of recent changes, stage of the project, direction of the changes and so on. -->
 Analyze the git history and top modules/files to identify:
 1. The main areas of development focus in the past year.
 2. Frequently updated modules, directories, or core files.
@@ -56,6 +76,7 @@ Generate a list of 5-7 questions that the new developer should dig into via anal
 
 Suggest 3-5 next steps for the new developer to get a deeper understanding of the project via codebase, git history and project repository. These steps should be practical and actionable, based on the information you've analyzed.
 
+<!-- Below we use one-shot to precisely specify the content of generated document. -->
 Your final output should **only** include the content in markdown with the specified format that you will save in `.ai/onboarding.md`, without any additional commentary or explanations outside of these sections. Structure the output as follows, **filling it with information discovered from the repository**:
 
 ```markdown
