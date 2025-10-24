@@ -14,7 +14,7 @@ tools: ['codebase', 'search', 'searchResults', 'changes', 'editFiles', 'runComma
 
 * How to use it: use agent mode, choose one of the recommended models, launch prompt via `/plan-onboard`. No additional parameters needed.
 
-* Frequency of document regeneration: depending on project dynamics, one time per quarter is resonable baseline, to be adjusted subsequently.
+* Frequency of document regeneration: depending on project dynamics, one time per quarter is reasonable baseline, to be adjusted subsequently.
 
 DISCLAIMER: this prompt is derived from 10xdevs training (https://www.10xdevs.pl/)
  -->
