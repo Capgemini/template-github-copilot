@@ -10,7 +10,7 @@ tools: ['codebase', 'search', 'searchResults', 'changes', 'findTestFiles', 'term
 
 * Recommended models: Claude Sonnet 4+
 
-* How to use it: use agent mode, choose one of the recommended models, launch prompt via `/plan-create <requirement specification>`. Pass brief requirement spefication as a parameter to the prompt.
+* How to use it: use agent mode, choose one of the recommended models, launch prompt via `/plan-create <requirement specification>`. Pass brief requirement specification as a parameter to the prompt.
 
 DISCLAIMER: this prompt is derived from 10xdevs training (https://www.10xdevs.pl/)
 -->
