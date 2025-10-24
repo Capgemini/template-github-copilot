@@ -143,6 +143,7 @@ When adding new chat modes, prompts, or instructions:
 
 - See `AGENTS.md` for general AI agent instructions and project context
 - See `.github/copilot-instructions.md` for Copilot-specific rules and configuration
+- See `CONTRIBUTING.md` for guidelines on contributing to this repository
 
 ### Copilot Customisation
 
