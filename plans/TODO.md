@@ -53,3 +53,5 @@ Review checklist mapping:
 Change log (for this file):
 
 - P1-06 completed by creating this structured TODO and seeding tasks.
+
+<!-- © Capgemini 2025 -->

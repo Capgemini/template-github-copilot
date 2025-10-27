@@ -320,3 +320,5 @@ Notes:
 
 - Chat modes and prompts should reference these SSOT files. Avoid duplicating numeric thresholds, templates, or process steps in multiple places.
 - CI tasks (if added) should validate adherence to SSOT anchors where practical.
+
+<!-- © Capgemini 2025 -->

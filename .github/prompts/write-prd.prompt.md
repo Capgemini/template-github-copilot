@@ -107,3 +107,5 @@ Where helpful, add short implementation notes and suggested acceptance tests tha
 - Save under `docs/PRDs/` using `prd-[brief-title-slug].md` unless an existing convention overrides it.
 - Do not publish without confirming with the requester or PRD owner.
 </CRITICAL_REQUIREMENT>
+
+<!-- © Capgemini 2025 -->

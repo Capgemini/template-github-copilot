@@ -60,3 +60,5 @@ References:
 - GitHub Actions docs: https://docs.github.com/actions
 - Copilot repository instructions: [copilot-instructions.md](./copilot-instructions.md)
 
+
+<!-- © Capgemini 2025 -->

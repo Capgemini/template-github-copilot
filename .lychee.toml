@@ -20,3 +20,5 @@ accept_pattern = [
   "^mailto:",
   "^#",
 ]
+
+# © Capgemini 2025

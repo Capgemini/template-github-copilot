@@ -17,3 +17,5 @@ Design docs that affect this repository's code should live here. If your organiz
 ### External Design documents
 
 - (Add links to external design docs or diagrams hosted outside the repo)
+
+<!-- © Capgemini 2025 -->

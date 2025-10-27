@@ -31,3 +31,5 @@ jobs:
             **/*.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+# © Capgemini 2025

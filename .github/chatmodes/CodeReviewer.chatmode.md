@@ -72,3 +72,5 @@ How to interpret: Apply these requirements in full; include at least one positiv
 </CRITICAL_REQUIREMENT>
 
 
+
+<!-- © Capgemini 2025 -->

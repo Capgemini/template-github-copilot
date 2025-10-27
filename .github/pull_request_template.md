@@ -21,3 +21,5 @@
 ## Notes for Reviewers
 
 - Risks, trade-offs, or areas needing extra attention
+
+<!-- © Capgemini 2025 -->

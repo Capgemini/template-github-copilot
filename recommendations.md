@@ -238,3 +238,5 @@ Principles:
 Primary issues: Duplication (documentation workflow, coverage rules, branch process), conflicting numeric policies (coverage, estimation), and sparse backend / BDD guidance. Remedy through an authoritative source map, lean refactors that replace repetition with references, and a central quality policy. After changes, maintenance cost and drift risk decrease; onboarding clarity increases.
 
 ...existing code...
+
+<!-- © Capgemini 2025 -->

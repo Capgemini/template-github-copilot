@@ -191,3 +191,5 @@ Practical tips
 - Capture findings immediately in the plan and update the plan version/branch.
 - When a loop uncovers large unknowns, convert the discovery into a separate spike with clear scope and exit criteria.
 - Use the available Planner tools ('codebase', 'editFiles', 'fetch', 'get_file_contents', 'runCommands', 'search', 'usages') in combination; prefer small experiments over long guesses.
+
+<!-- © Capgemini 2025 -->

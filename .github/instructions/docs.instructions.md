@@ -177,3 +177,5 @@ flowchart TD
 	H --> I[Plan maintenance cadence]
 ```
 
+
+<!-- © Capgemini 2025 -->

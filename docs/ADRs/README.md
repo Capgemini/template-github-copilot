@@ -11,3 +11,5 @@ ADRs document significant architectural decisions along with their context and c
 Add links to ADRs in sequential order using the naming convention `adr-NNNN-title-slug.md`.
 
 - [ADR 0001 Brief Title Slug](adr-0001-brief-title-slug.md)
+
+<!-- © Capgemini 2025 -->

@@ -77,3 +77,5 @@ List all main stakeholders, their roles, and relevant contact or notes. Add/remo
 ### 13. References & Related Documents
 
 - Link to wireframes, mockups, technical specs, research, or other supporting docs.
+
+<!-- © Capgemini 2025 -->

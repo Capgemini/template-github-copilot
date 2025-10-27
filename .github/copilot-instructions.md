@@ -436,3 +436,4 @@ The `.github` directory contains several subdirectories and files that organize 
 - `workflows/`: Intended for GitHub Actions workflow files, which automate CI/CD and other repository tasks. (Currently empty, but will be expanded.)
 
 Refer to the main README.md for a full overview of repository goals and usage.
+<!-- © Capgemini 2025 -->
