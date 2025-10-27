@@ -23,3 +23,5 @@ Example: `Q4 2025 — Platform auth hardening` ![In Progress](https://img.shield
 - Qx YYYY — Milestone name
   - Outcomes
   - Links to PRs/Docs
+
+<!-- © Capgemini 2025 -->

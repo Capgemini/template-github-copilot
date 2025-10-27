@@ -423,3 +423,5 @@ PROMPTING TECHNIQUES: Specific examples that can be emulated.
 - Complex functions refactored into single-responsibility methods for clarity.
 
 
+
+<!-- © Capgemini 2025 -->

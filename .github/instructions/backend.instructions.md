@@ -239,3 +239,5 @@ using (logger.BeginScope(new Dictionary<string, object>{{"correlationId", cid}})
 References:
 - Branch/PR workflow and conventions: `.github/copilot-instructions.md`.
 - Coverage and critical-path rules: `.github/copilot-instructions.md#quality-policy`.
+
+<!-- © Capgemini 2025 -->

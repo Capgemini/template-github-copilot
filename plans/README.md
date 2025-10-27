@@ -23,3 +23,5 @@ Plans are used to:
 ## Archive
 
 Completed plans are moved from this directory into the `plans/archive` directory.
+
+<!-- © Capgemini 2025 -->

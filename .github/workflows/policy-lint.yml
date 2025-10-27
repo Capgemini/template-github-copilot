@@ -20,3 +20,5 @@ jobs:
       - name: Run policy validator
         run: |
           node scripts/validate-policy.js
+
+# © Capgemini 2025

@@ -310,3 +310,5 @@ The implementation will preserve the existing file structure and formatting whil
 - [x] Estimates present and normalized to hours
 - [x] At least one test/validation approach is defined
 - [x] Security & compliance items are noted
+
+<!-- © Capgemini 2025 -->

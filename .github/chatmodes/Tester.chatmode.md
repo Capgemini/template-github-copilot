@@ -126,3 +126,5 @@ How to interpret: Treat these as gates before merging; if unmet, iterate until s
 
 
 
+
+<!-- © Capgemini 2025 -->

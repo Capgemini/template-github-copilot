@@ -288,3 +288,5 @@ If you have questions about contributing, please:
 3. Open an issue with your question
 
 Thank you for helping make this repository a valuable educational resource!
+
+<!-- © Capgemini 2025 -->

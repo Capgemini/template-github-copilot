@@ -95,3 +95,4 @@ Bad:  # Architecture
 
 
  
+<!-- © Capgemini 2025 -->

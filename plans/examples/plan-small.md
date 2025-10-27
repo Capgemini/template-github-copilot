@@ -54,3 +54,5 @@ Purpose: Demonstrate a lightweight planning artifact using complexity-only estim
 
 - Quality & Coverage Policy: `.github/copilot-instructions.md#quality-policy`
 - Template: `plans/plan-template.md`
+
+<!-- © Capgemini 2025 -->

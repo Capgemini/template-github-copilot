@@ -86,3 +86,5 @@ Use saving and location guidance in `.github/instructions/docs.instructions.md`.
 This chat mode does not restate the flow. Use the canonical source of truth (SSOT).
 -->
 - Reference: See `.github/instructions/docs.instructions.md#documentation-process-flow` for the canonical mermaid flow.
+
+<!-- © Capgemini 2025 -->
