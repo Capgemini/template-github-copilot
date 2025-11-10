@@ -6,11 +6,11 @@ A custom chat mode is a bundled set of instructions, constraints, and examples t
 
 ## Chat modes in this repository
 
-- [Code Review](CodeReview.chatmode.md)
+- [Code Reviewer](CodeReviewer.chatmode.md)
 - [Developer](Developer.chatmode.md)
 - [Documentation](Documentation.chatmode.md)
 - [Planner](Planner.chatmode.md)
-- [Testing](Testing.chatmode.md)
+- [Tester](Tester.chatmode.md)
 
 ### SSOT and anti-duplication
 
