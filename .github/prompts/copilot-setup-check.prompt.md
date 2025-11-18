@@ -1,7 +1,9 @@
 ---
-mode: 'agent'
+agent: 'agent'
+argument-hint: 'none'
+name: 'copilot-setup-check'
 description: 'Evaluate repository Copilot configuration and provide optimization recommendations.'
-tools: ['codebase', 'search', 'editFiles', 'usages', 'problems', 'changes']
+tools: ['search/codebase', 'search', 'usages', 'problems', 'changes']
 ---
 
 <!-- Top-level section: Defines the primary task (evaluate Copilot setup) and sets expectations for comprehensive analysis and actionable recommendations. -->
@@ -41,16 +43,13 @@ This evaluation will assess:
 ### Phase 1: Core Files Assessment
 
 1. **For each file type, check existence and quality**
-   - Verify presence and structure
-   - Assess clarity of repository context
-   - Evaluate AI agent guidance completeness
-   - Check for conflicting instructions warning mechanisms
-   - Verify effectiveness of XML semantic tags reinforcing critical requirements
-   - Suggest improvements for clarity and completeness
-   - Suggest enhancements for maintainability and organization
-   - Suggest additions for missing best practices
-   - Suggest removal of redundant or conflicting content
-   - Suggest reinforcements (e.g. XML, Mermaid) for critical policies
+   - Presence & structure
+   - Clarity & context (includes AI agent guidance)
+   - Conflict detection & warning mechanisms
+   - Enforcement markers (XML semantic tags)
+   - Improvement actions (clarity, maintainability, missing best practices)
+   - Prune redundancies & resolve conflicts
+   - Reinforcement opportunities (semantic tags, diagrams)
 
 2. **Evaluate .github/copilot-instructions.md**
    - Verify comprehensive project methodology coverage
