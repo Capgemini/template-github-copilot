@@ -98,11 +98,14 @@ For minor fixes (typos, small corrections):
 
 1. **Fork**: Click the "Fork" button on GitHub to create your own copy of the repository
 2. **Clone your fork**:
+
    ```bash
    git clone https://github.com/YOUR-USERNAME/template-github-copilot.git
    cd template-github-copilot
    ```
+
 3. **Add upstream remote** (to keep your fork synchronized with the original repository):
+
    ```bash
    git remote add upstream https://github.com/Capgemini/template-github-copilot.git
    ```
