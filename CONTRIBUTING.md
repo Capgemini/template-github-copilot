@@ -94,9 +94,20 @@ For minor fixes (typos, small corrections):
 
 ### 3. Development Workflow
 
-Follow the repository's trunk-based development workflow:
+#### Fork the Repository
 
-#### Branch Creation
+1. **Fork**: Click the "Fork" button on GitHub to create your own copy of the repository
+2. **Clone your fork**:
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/template-github-copilot.git
+   cd template-github-copilot
+   ```
+3. **Add upstream remote** (to keep your fork synchronized with the original repository):
+   ```bash
+   git remote add upstream https://github.com/Capgemini/template-github-copilot.git
+   ```
+
+#### Create a Feature Branch
 
 Create a feature branch following our naming conventions:
 
@@ -169,12 +180,31 @@ non-negotiable requirements while maintaining human readability
 -->
 ```
 
-### 4. Submit a Pull Request
+### 4. Keep Your Fork Updated
 
-1. **Push your branch**: `git push origin <type>/<brief-description>`
-2. **Create PR**: Open a pull request with a clear title matching your branch name format
-3. **Complete PR template**: Fill out all sections of the pull request template
-4. **Link issues**: Reference any related issues using `Fixes #123` or `Closes #456`
+Before submitting your pull request, sync your fork with the latest changes:
+
+```bash
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
+```
+
+Then rebase your feature branch:
+
+```bash
+git checkout <type>/<brief-description>
+git rebase main
+```
+
+### 5. Submit a Pull Request
+
+1. **Push your branch to your fork**: `git push origin <type>/<brief-description>`
+2. **Create PR**: Go to the original repository on GitHub and click "New Pull Request"
+3. **Select branches**: Choose your fork's branch as the source and the original repository's `main` as the target
+4. **Complete PR template**: Fill out all sections of the pull request template
+5. **Link issues**: Reference any related issues using `Fixes #123` or `Closes #456`
 
 #### Pull Request Requirements
 
@@ -187,7 +217,7 @@ Your PR must include:
 - **Thorough comments**: All prompt content must be well-commented
 - **Small scope**: Keep PRs focused (target ≤ 400 lines when possible)
 
-### 5. Review Process
+### 6. Review Process
 
 1. **Automated checks**: Ensure all CI checks pass (markdown lint, link checker, etc.)
 2. **Maintainer review**: At least one maintainer approval required
