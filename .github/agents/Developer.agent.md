@@ -1,6 +1,6 @@
 ---
 description: 'Developer Agent'
-tools: ['search/codebase', 'usages', 'problems', 'changes', 'testFailure', 'runCommands/terminalSelection', 'runCommands/terminalLastCommand', 'openSimpleBrowser', 'fetch', 'findTestFiles', 'search/searchResults', 'githubRepo', 'todos', 'edit/editFiles', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks']
+tools: ['search/codebase', 'usages', 'problems', 'changes', 'testFailure', 'runCommands/terminalSelection', 'runCommands/terminalLastCommand', 'openSimpleBrowser', 'fetch', 'findTestFiles', 'search/searchResults', 'githubRepo', 'todos', 'edit/editFiles', 'runNotebooks', 'new', 'runCommands', 'runTasks']
 ---
 
 <!-- This is an example Agent, rather than a canonical one -->
