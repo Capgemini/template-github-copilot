@@ -1,7 +1,9 @@
 
 # Repository Configuration & Content Quality Assessment
 
-Scope: Qualitative review of configuration layers (core config, chat modes, instruction files, prompts, planning assets, engineering docs, templates) with redundancy, conflict, risk, and improvement guidance.
+> **Note:** As of October 2025, GitHub renamed "Chat Modes" to "Agents". This document was written before that change and references the deprecated `.github/chatmodes/` directory. The new `.github/agents/` directory uses the `.agent.md` extension. Many recommendations in this document have been addressed.
+
+Scope: Qualitative review of configuration layers (core config, chat modes/agents, instruction files, prompts, planning assets, engineering docs, templates) with redundancy, conflict, risk, and improvement guidance.
 
 Status Legend:
 

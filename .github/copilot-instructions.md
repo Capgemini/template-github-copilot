@@ -396,7 +396,7 @@ Exceptions:
 - Obtain at least one reviewer acknowledgment of the exception in review comments
 
 References:
-- Chat modes (Developer/Tester) MUST reference this section instead of hardcoding numeric targets.
+- Agents (Developer/Tester) MUST reference this section instead of hardcoding numeric targets.
 - Project-specific overrides, if any, MUST be documented here to remain authoritative.
 
 ---
@@ -423,7 +423,9 @@ NOTE: This section may be removed when used as template, hence the disclaimer
 
 The `.github` directory contains several subdirectories and files that organize configuration, prompts, and instructions for Copilot and other AI agents:
 
-- `chatmodes/`: Contains chat mode configuration files (e.g., `custom-mode.chatmode.md`) that define custom conversational behaviors for Copilot and other agents.
+- `agents/`: Contains agent configuration files (e.g., `Developer.agent.md`) that define custom conversational behaviors for Copilot and other agents. As of October 2025, GitHub renamed "Chat Modes" to "Agents".
+
+- `chatmodes/`: *(Deprecated)* Contains chat mode configuration files (e.g., `Developer.chatmode.md`) for backward compatibility. New development should use the `agents/` directory.
 
 - `instructions/`: Holds instruction files for backend, frontend, and documentation. These guide Copilot and other agents on best practices and project-specific rules. You must apply these instructions to relevant files in the repository.
   - `backend.instructions.md`
