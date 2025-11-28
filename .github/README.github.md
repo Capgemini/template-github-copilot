@@ -2,7 +2,8 @@
 
 This directory contains repository-level configuration and assets that tailor GitHub and GitHub Copilot to this project. It centralizes:
 - Copilot repository instructions and guidance
-- Custom Chat Modes used in Copilot Chat
+- Custom Agents used in Copilot Chat (new format)
+- Custom Chat Modes used in Copilot Chat (deprecated, for backward compatibility)
 - Reusable Prompt files (slash commands)
 - Instruction files for languages/domains
 - GitHub Actions workflows (CI/CD) scaffolding
@@ -13,7 +14,7 @@ Scope: This README documents the `.github/` directory only. For project-wide ove
 
 ### Copying Copilot Customisations
 
-The custom chat modes, instructions, and prompts are designed to be portable across repositories with the same directory layout. For general guidance and caveats, see the root [README: “Copying Copilot Customisations”](../README.md#7-copying-copilot-customisations).
+The custom agents, chat modes, instructions, and prompts are designed to be portable across repositories with the same directory layout. For general guidance and caveats, see the root [README: “Copying Copilot Customisations”](../README.md#7-copying-copilot-customisations).
 
 Most files contain **HTML comments** inlined with additional context (functionality, intent, and prompting techniques). View the raw source to see these notes.
 
@@ -30,9 +31,26 @@ Key SSOT anchors:
 See also:
 - Project overview in [README.md](../README.md)
 
-### Custom Chat Modes
+### Custom Agents
 
-- [Custom Chat Modes](./chatmodes/README.md)
+- [Custom Agents](./agents/README.md)
+
+> **Note:** As of October 2025, GitHub renamed "Chat Modes" to "Agents". See [GitHub's announcement](https://github.blog/changelog/2025-10-28-custom-agents-for-github-copilot/) for details.
+
+Agents provide specialized behaviors in Copilot Chat (e.g., Developer, Code Review, Testing). Each agent documents its persona, process, constraints, and available tools. Files live under `./agents/` and use the `.agent.md` extension.
+
+Available agents:
+- **Developer** - Test-driven development with quality gates and design-first methodology
+- **Code Reviewer** - Systematic code review with best practices enforcement
+- **Tester** - BDD-focused testing approach with comprehensive test coverage
+
+> **Note:** VS Code now ships with built-in Planner and Documentation agents. This repository provides complementary agents that don't duplicate those built-in capabilities.
+
+### Custom Chat Modes (Deprecated)
+
+- [Custom Chat Modes](./chatmodes/README.md) *(deprecated)*
+
+> ⚠️ **DEPRECATED**: The `.github/chatmodes/` directory is maintained for backward compatibility with VS Code. New development should use the `.github/agents/` directory with the `.agent.md` extension.
 
 Chat Modes provide specialized behaviors in Copilot Chat (e.g., Developer, Code Review, Documentation, Testing, Planner). Each mode documents its persona, process, constraints, and available tools. Files live under `./chatmodes/` and use the `.chatmode.md` extension.
 
