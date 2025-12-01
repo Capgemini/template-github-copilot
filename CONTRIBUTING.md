@@ -206,8 +206,8 @@ git rebase main
 1. **Push your branch to your fork**: `git push origin <type>/<brief-description>`
 2. **Create PR**: Go to the original repository on GitHub and click "New Pull Request"
    (Your fork repository should also detect the changes and offer a button `Compare & pull request`)
-3. **Select branches**: Choose your fork's branch as the source (`head` repository, `compare` branch)
-and the original repository's `main` as the target (`base` repository and branch)
+3. **Select branches**: Choose your fork's branch as the source (set `head` repository to your fork, `compare` branch to your feature branch)
+   and the original repository's `main` as the target (set `base` repository to `Capgemini/template-github-copilot`, `base` branch to `main`)
 4. **Complete PR template**: Fill out all sections of the pull request template
 5. **Link issues**: Reference any related issues using `Fixes #123` or `Closes #456`
 
