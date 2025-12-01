@@ -204,8 +204,8 @@ git rebase main
 ### 5. Submit a Pull Request
 
 1. **Push your branch to your fork**: `git push origin <type>/<brief-description>`
-2. **Create PR**: Go to the original repository on GitHub and click "New Pull Request".
-Your fork repository should also detect the changes and offer a button `Compare & pull request`
+2. **Create PR**: Go to the original repository on GitHub and click "New Pull Request"
+   (Your fork repository should also detect the changes and offer a button `Compare & pull request`)
 3. **Select branches**: Choose your fork's branch as the source (`head` repository, `compare` branch)
 and the original repository's `main` as the target (`base` repository and branch)
 4. **Complete PR template**: Fill out all sections of the pull request template
