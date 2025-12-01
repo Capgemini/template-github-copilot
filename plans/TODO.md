@@ -1,5 +1,7 @@
 # TODO list
 
+> **Note:** As of October 2025, GitHub renamed "Chat Modes" to "Agents". References to `.github/chatmodes/` and `*.chatmode.md` files in this TODO refer to the deprecated format. The new `.github/agents/` directory uses the `.agent.md` extension. See the migration PR for details.
+
 ## Repository Improvement TODOs
 
 Purpose: Track and review each suggested improvement from `recommendations.md` item by item. Use this as the authoritative checklist for implementation and review.

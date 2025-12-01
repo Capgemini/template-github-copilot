@@ -77,7 +77,8 @@ Major changes to existing configurations should be discussed in an issue before 
 - **Read SSOT files**: Understand the authoritative guidelines in:
   - `.github/copilot-instructions.md` - Core policies and workflow
   - `.github/instructions/docs.instructions.md` - Documentation standards
-  - `.github/chatmodes/README.md` - Chat mode authoring guide
+  - `.github/agents/README.md` - Agent authoring guide
+  - `.github/chatmodes/README.md` - Chat mode authoring guide (deprecated)
   - `README.md` - Repository overview and SSOT source map
 
 ### 2. Create an Issue (Recommended)
@@ -137,8 +138,8 @@ git checkout -b <type>/<brief-description>
 
 **Examples**:
 
-- `feat: Add security-focused chat mode with threat modeling`
-- `fix: Correct typo in Developer.chatmode.md`
+- `feat: Add security-focused agent with threat modeling`
+- `fix: Correct typo in Developer.agent.md`
 - `docs: Improve explanation of prompting techniques`
 
 #### Adding Comments to Prompts
@@ -253,7 +254,9 @@ plans/                 # Project planning documents
 - Use proper Markdown formatting
 - Avoid emojis in formal documentation (except in this guide for visual clarity)
 
-### Prompts and Chat Modes
+### Prompts and Agents
+
+> **Note:** As of October 2025, GitHub renamed "Chat Modes" to "Agents". New contributions should use the `.github/agents/` directory with the `.agent.md` extension. The `.github/chatmodes/` directory is maintained for backward compatibility.
 
 - Include comprehensive HTML comments
 - Explain prompting techniques explicitly
