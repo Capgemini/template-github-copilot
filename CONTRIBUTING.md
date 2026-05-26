@@ -14,7 +14,7 @@ We welcome the following types of contributions:
 
 ### ✅ New Custom Prompts (Educational Examples Only)
 
-- **Accepted**: New custom prompts, chat modes, or instructions that demonstrate prompting techniques and repository setup patterns
+- **Accepted**: New custom prompts, agents, or instructions that demonstrate prompting techniques and repository setup patterns
 - **Required**: Comprehensive inline comments explaining:
   - The prompting technique being demonstrated
   - Design rationale and reinforcement strategies
@@ -22,7 +22,7 @@ We welcome the following types of contributions:
   - Example usage scenarios
 - **Not Accepted**: Generic prompt libraries without educational value or thorough documentation
 
-**Example**: A new chat mode that demonstrates a specific prompting pattern (e.g., chain-of-thought reasoning) with detailed comments explaining how and why it works.
+**Example**: A new agent that demonstrates a specific prompting pattern with detailed comments explaining how and why it works.
 
 ### ✅ Corrections to Existing Configuration/Prompts
 
@@ -68,6 +68,10 @@ This is not a collection of general-purpose prompts. We only accept prompts that
 
 Major changes to existing configurations should be discussed in an issue before submission.
 
+### ❌ Retired Customization Formats
+
+Do not introduce new files or docs for retired Copilot customization formats. New work must use the current agent, instruction, and prompt surfaces.
+
 ## How to Contribute
 
 ### 1. Before You Start
@@ -78,7 +82,6 @@ Major changes to existing configurations should be discussed in an issue before 
   - `.github/copilot-instructions.md` - Core policies and workflow
   - `.github/instructions/docs.instructions.md` - Documentation standards
   - `.github/agents/README.md` - Agent authoring guide
-  - `.github/chatmodes/README.md` - Chat mode authoring guide (deprecated)
   - `README.md` - Repository overview and SSOT source map
 
 ### 2. Create an Issue (Recommended)
@@ -130,8 +133,8 @@ git checkout -b <type>/<brief-description>
 
 **Examples**:
 
-- `feature/add-security-chatmode`
-- `fix/typo-in-developer-mode`
+- `feature/add-security-agent`
+- `fix/typo-in-developer-agent`
 - `docs/improve-contributing-guide`
 
 #### Making Changes
@@ -265,7 +268,7 @@ Familiarize yourself with the repository organization:
 
 ```text
 .github/
-├── chatmodes/          # Custom chat mode definitions
+├── agents/             # Custom agent definitions (current)
 ├── instructions/       # Domain-specific instruction files
 ├── prompts/            # Reusable prompt templates
 └── workflows/          # GitHub Actions workflows
@@ -291,7 +294,7 @@ plans/                 # Project planning documents
 
 ### Prompts and Agents
 
-> **Note:** As of October 2025, GitHub renamed "Chat Modes" to "Agents". New contributions should use the `.github/agents/` directory with the `.agent.md` extension. The `.github/chatmodes/` directory is maintained for backward compatibility.
+> **Note:** New contributions should use the `.github/agents/` directory with the `.agent.md` extension.
 
 - Include comprehensive HTML comments
 - Explain prompting techniques explicitly

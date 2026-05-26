@@ -14,7 +14,7 @@ Perform a comprehensive evaluation of the repository's GitHub Copilot and AI age
 
 This evaluation will assess:
 - **.github/copilot-instructions.md** - Copilot-specific configuration and guidelines
-- **.github/chatmodes/** - Custom conversational behaviors and specialized modes
+- **.github/agents/** - Custom agent behaviors, tool restrictions, and task specializations
 - **.github/prompts/** - Reusable prompt templates and slash commands
 - **.github/instructions/** - Language and domain-specific coding guidelines
 - **Repository structure** - Overall organization and documentation completeness
@@ -30,7 +30,7 @@ This evaluation will assess:
 - **Maintainability**: Configuration is organized for long-term maintenance
 
 ### Advanced Setup Features
-- **Custom Chatmodes**: Specialized conversational behaviors for different contexts
+- **Custom Agents**: Specialized conversational behaviors for different contexts
 - **Prompt Templates**: Reusable templates for common development tasks
 - **Domain Instructions**: Language and framework-specific coding guidelines
 - **Workflow Integration**: Alignment with development processes and branching strategy
@@ -60,10 +60,10 @@ This evaluation will assess:
 
 ### Phase 2: Advanced Configuration Review
 
-3. **Analyze custom chatmodes**
-   - Count and categorize existing chatmodes
+3. **Analyze custom agents**
+   - Count and categorize existing agents
    - Assess relevance to project needs
-   - Check for mode-specific optimization
+   - Check for role-specific optimization and tool scoping
    - Evaluate documentation quality
    - Evaluate conflicts with core instructions, custom instructions (per file type), or custom prompts
 
@@ -72,7 +72,7 @@ This evaluation will assess:
    - Assess prompt structure and parameterization
    - Check tool integration and capability coverage
    - Evaluate reusability and maintenance
-   - Evaluate conflicts with core instructions, custom instructions (per file type), or custom chatmodes
+   - Evaluate conflicts with core instructions, custom instructions (per file type), custom agents, or custom prompts
 
 5. **Examine instruction files**
    - Catalog language/domain-specific instructions
@@ -81,7 +81,7 @@ This evaluation will assess:
    - Check alignment with project requirements
    - Evaluate specificity and actionability
    - Evaluate specific coding standards and quality requirements
-   - Evaluate conflicts with core instructions, custom chatmodes, or custom prompts
+   - Evaluate conflicts with core instructions, custom agents, or custom prompts
 
 ### Phase 3: Integration and Optimization
 6. **Repository structure alignment**
@@ -111,6 +111,7 @@ This evaluation will assess:
 
 **Advanced Features Assessment:**
 - Feature utilization analysis
+- Alignment assessment for current configuration artifacts
 - Optimization opportunities
 - Missing capabilities assessment
 - Integration quality evaluation

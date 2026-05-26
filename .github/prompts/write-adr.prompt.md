@@ -1,7 +1,6 @@
 ---
-mode: 'agent'
 description: 'Create an Architectural Decision Record (ADR) document for AI-optimized decision documentation.'
-tools: ['search/codebase', 'usages', 'problems', 'changes', 'runCommands/terminalSelection', 'runCommands/terminalLastCommand', 'fetch', 'search/searchResults', 'edit/editFiles', 'search', 'runCommands']
+tools: ['search/codebase', 'search/usages', 'read/problems', 'read/terminalSelection', 'read/terminalLastCommand', 'web/fetch', 'edit/editFiles', 'search', 'execute/getTerminalOutput','execute/runInTerminal','read/terminalLastCommand','read/terminalSelection']
 ---
 
 <!-- Top-level section: Defines the primary task (create an ADR) and sets expectations for structured, AI-optimised output. Techniques: imperative directives, variable interpolation (${input:...}) to parameterise the decision title, and a rule to request more context when inputs are insufficient. -->

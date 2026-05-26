@@ -1,6 +1,6 @@
 ---
 description: 'Tester Agent'
-tools: ['codebase', 'search', 'editFiles', 'usages', 'problems', 'changes', 'terminalSelection', 'terminalLastCommand', 'runCommands']
+tools: ['search/codebase', 'search', 'edit/editFiles', 'search/usages', 'read/problems', 'read/terminalSelection', 'read/terminalLastCommand', 'execute/getTerminalOutput','execute/runInTerminal','read/terminalLastCommand','read/terminalSelection']
 ---
 
 # Tester Agent Instructions

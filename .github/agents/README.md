@@ -2,7 +2,7 @@
 
 This document explains how we author and maintain custom agents for Copilot in this repository. It is written for contributors who will create, review, or update agent definition documents. The goal is to describe what a custom agent is, how it is structured, and best practices for crafting clear, safe, and testable instructions.
 
-> **Note:** As of October 2025, GitHub renamed "Chat Modes" to "Agents". See [GitHub's announcement](https://github.blog/changelog/2025-10-28-custom-agents-for-github-copilot/) for details. VS Code now includes built-in Planner and Documentation agents, so this repository provides agents that complement (not duplicate) those built-in capabilities.
+> **Note:** VS Code now includes a built-in Planner/Plan agent.
 
 A custom agent is a bundled set of instructions, constraints, and examples that guide the language model to behave in a consistent, predictable way for a particular task or personality. Agents encode the expected role (persona), the step-by-step process the assistant should follow, the allowed output formats, and representative examples that demonstrate correct and incorrect behavior. By keeping these definitions explicit and version-controlled, teams can iterate on assistant behavior and reuse agents across projects.
 
@@ -10,9 +10,10 @@ A custom agent is a bundled set of instructions, constraints, and examples that 
 
 - [Code Reviewer](CodeReviewer.agent.md)
 - [Developer](Developer.agent.md)
+- [Documentation](Documentation.agent.md)
 - [Tester](Tester.agent.md)
 
-> **Note:** Documentation and Planner agents are now built-in to VS Code and are not duplicated here. For legacy compatibility, see [`.github/chatmodes/`](../chatmodes/README.md) (deprecated).
+> **Note:** Planner/Plan is built-in to VS Code and is not duplicated here.
 
 ### SSOT and anti-duplication
 
@@ -25,7 +26,7 @@ Agents may include small, agent-specific process steps or examples, but must not
 
 ## Official Docs
 
- - [Visual Studio Code custom agents docs](https://code.visualstudio.com/docs/copilot/customization/custom-chat-modes)
+ - [Visual Studio Code custom agents docs](https://code.visualstudio.com/docs/copilot/customization/custom-agents)
  - [GitHub custom agents announcement](https://github.blog/changelog/2025-10-28-custom-agents-for-github-copilot/)
 
 ## Structure of a Custom Agent Definition
@@ -36,22 +37,37 @@ An agent definition document is a small, opinionated specification that the runt
 
 Agent files are Markdown documents that use the `.agent.md` extension. For workspace-shared agents, place files in the `.github/agents/` folder so collaborators can discover and use them; for personal agents put them in your VS Code profile folder. Name the file to match the agent's `name` frontmatter (kebab-case) for clarity, e.g. `code-synthesis.agent.md`.
 
-You can create a new agent using the VS Code command palette (Chat: New Mode File) or via Configure Chat > Modes in the Chat view; the editor will scaffold an `.agent.md` file for you.
+You can create a new agent using the VS Code command palette (`Chat: New Custom Agent`) or via Configure Chat > Agents in the Chat view; the editor will scaffold an `.agent.md` file for you.
 
 ### Frontmatter (VS Code keys)
 
-VS Code recognizes a small set of frontmatter keys that affect how agents behave in the editor and which tools are available. At minimum include these keys in the top YAML frontmatter so VS Code can display and configure the agent correctly:
+VS Code recognizes a broader set of frontmatter keys that affect how agents behave in the editor and which tools are available. Common keys include:
 
 - `description` (string): Brief description used as placeholder text in the chat input and as hover text in the agent picker.
+- `name` (string, optional): Display name shown in the agents picker. If omitted, VS Code uses the file name.
+- `argument-hint` (string, optional): Hint text that guides users on how to invoke the agent.
 - `tools` (list[string]): Names of tools or tool sets available for this agent (for example: `['codebase','fetch','search']`). Use the Configure Tools action to select valid tool names.
+- `agents` (list[string], optional): Allowable subagents when the agent tool is enabled.
+- `handoffs` (list, optional): Suggested next-agent transitions shown after a response.
+- `user-invocable` (boolean, optional): Controls whether the agent appears in the agents picker.
+- `disable-model-invocation` (boolean, optional): Prevents the agent from being invoked as a subagent.
+- `target` (string, optional): Target environment such as `vscode` or `github-copilot`.
 - `model` (string, optional): Model override for this agent. If omitted, the user's selected model is used.
+
+`infer` is deprecated in current VS Code releases. Prefer `user-invocable` and `disable-model-invocation` for visibility and subagent control.
 
 Example frontmatter (VS Code-focused):
 
 ```yaml
 ---
+name: developer
 description: Generate an implementation plan for a feature or refactor.
 tools: ['codebase', 'search', 'fetch']
+handoffs:
+	- label: Start Review
+		agent: codereviewer
+		prompt: Review the proposed implementation for correctness and maintainability.
+		send: false
 model: Claude Sonnet 4
 ---
 ```
