@@ -3,6 +3,7 @@
 This directory contains repository-level configuration and assets that tailor GitHub and GitHub Copilot to this project. It centralizes:
 - Copilot repository instructions and guidance
 - Custom Agents used in Copilot Chat (new format)
+- Reusable Skills for domain-specific guidance
 - Reusable Prompt files (slash commands)
 - Instruction files for languages/domains
 - GitHub Actions workflows (CI/CD) scaffolding
@@ -66,6 +67,15 @@ Instruction files are small, focused rule sets with optional frontmatter (e.g., 
 - `frontend.instructions.md` (TypeScript/React conventions)
 - `docs.instructions.md` (applies to all `**/*.md`)
 - `bdd-tests.instructions.md` (applies to `**.feature`)
+
+### Custom Skills
+
+- [Custom Skills](./skills/README.md)
+
+Skills are reusable, domain-focused guidance documents that help assistants choose the right workflow and produce consistent outputs for specific tasks.
+
+Current example:
+- `docs-ssot-helper` - demonstrates how to update documentation while preserving SSOT alignment, canonical locations, and cross-links.
 
 ### Custom Prompts
 

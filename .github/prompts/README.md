@@ -21,6 +21,18 @@ This directory contains reusable prompt files that extend Copilot Chat with repe
 - Add an Inputs section with `${input:...}` placeholders and validation rules.
 - Define output structure and quality gates so results are consistent and reviewable.
 
+## Referencing skills from prompts
+
+Prompts can reference skills to improve workflow selection and keep outputs consistent with repository guidance.
+
+- Discover available skills in [../skills/README.md](../skills/README.md).
+- Link the relevant skill in the prompt context section when a workflow is domain-specific.
+- Prefer referencing the skill and SSOT docs instead of duplicating long instructions in the prompt.
+
+Current example skill:
+
+- [docs-ssot-helper](../skills/docs-ssot-helper/SKILL.md) for documentation updates aligned with repository SSOT, links, and canonical structure.
+
 ## Hints
 
 Within a prompt file, you can reference variables by using the `${variableName}` syntax. You can reference the following variables:

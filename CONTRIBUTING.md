@@ -14,7 +14,7 @@ We welcome the following types of contributions:
 
 ### ✅ New Custom Prompts (Educational Examples Only)
 
-- **Accepted**: New custom prompts, agents, or instructions that demonstrate prompting techniques and repository setup patterns
+- **Accepted**: New custom prompts, agents, instructions, or skills that demonstrate prompting techniques and repository setup patterns
 - **Required**: Comprehensive inline comments explaining:
   - The prompting technique being demonstrated
   - Design rationale and reinforcement strategies

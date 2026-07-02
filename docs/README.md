@@ -16,10 +16,11 @@ This directory contains all project-related documentation, organized into subdir
 
 ## Writing Documentation Using AI
 
-There are three current ways to influence and use AI to write documentation in this repository:
+There are four current ways to influence and use AI to write documentation in this repository:
 
 - [Custom agents](../.github/agents/README.md) — Specialized AI behaviors for tasks like development, testing, and code review.
 - [Instructions](../.github/instructions/docs.instructions.md) — Repository-specific rules and constraints (coding standards, workflow, style) that the AI must follow when producing content.
+- [Skills](../.github/skills/README.md) — Reusable, task-focused guidance for specific workflows (for example, docs SSOT alignment).
 - [Prompts](../.github/prompts/write-docs.prompt.md) — Reusable prompt templates for generating consistent artifacts (e.g., ADRs, docs, PRDs). See also [write-adr.prompt.md](../.github/prompts/write-adr.prompt.md) and [write-prd.prompt.md](../.github/prompts/write-prd.prompt.md).
 
 <!-- © Capgemini 2025 -->

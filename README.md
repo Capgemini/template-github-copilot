@@ -15,6 +15,7 @@ This repository is intended to help teams adopt Copilot best practices, understa
 - Working Copilot configurations with examples:
   - Example [Agents](.github/agents/README.md) *(current custom-agent format)*
   - Example [Instructions](.github/instructions/README.md)
+  - Example [Skills](.github/skills/README.md)
   - Example [Prompts](.github/prompts/README.md)
 - A GitHub Copilot [configuration overview](.github/README.github.md)
 - Clear documentation to understand, configure, and extend Copilot
@@ -25,7 +26,7 @@ This repository is intended to help teams adopt Copilot best practices, understa
 ## How to get started
 
 1. Create a new repository using “Use this template” (or fork/clone).
-2. Review and adapt the example [agents](.github/agents/README.md), [instructions](.github/instructions/README.md), and [prompts](.github/prompts/README.md).
+2. Review and adapt the example [agents](.github/agents/README.md), [instructions](.github/instructions/README.md), [skills](.github/skills/README.md), and [prompts](.github/prompts/README.md).
 3. Read the project docs in [docs/README.md](docs/README.md).
 
 <!-- Replace this paragraph with hints on finding information elsewhere in the repository -->
