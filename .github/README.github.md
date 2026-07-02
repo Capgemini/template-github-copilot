@@ -55,7 +55,7 @@ This repository is agent-first for current GitHub Copilot and VS Code releases.
 - `agents/Documentation.agent.md` is the current documentation workflow artifact
 - Planner behavior relies on the built-in VS Code Planner/Plan agent
 
-The repository no longer keeps retired mode-format files. If you are migrating an older setup, move those files to `.github/agents/`, rename them to `.agent.md`, and update any repo documentation or prompt references to use the current agent format.
+The repository no longer keeps retired legacy chat-format files. If you are migrating an older setup, move those files to `.github/agents/`, rename them to `.agent.md`, and update any repo documentation or prompt references to use the current agent format.
 
 ### Custom Instructions
 

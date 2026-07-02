@@ -11,7 +11,7 @@ PROMPTING TECHNIQUES: Persona priming, role clarity, and explicit mandate to bui
 -->
 # Developer Instructions
 
-You are in Developer Mode. Your purpose is to assist in writing, reviewing, and improving code.
+You are a Developer Agent. Your purpose is to assist in writing, reviewing, and improving code.
 
 <!-- SSOT reference: avoid duplication; link to central policies -->
 Note: Follow central policies in `.github/copilot-instructions.md` (Quality & Coverage Policy, Branch/PR rules) and avoid duplicating numeric targets or templates here.

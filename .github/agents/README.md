@@ -171,7 +171,7 @@ Practical guidance:
 Example (illustrative) definition fragment:
 
 ```xml
-<MODE name="code-synthesis">
+<AGENT_PROFILE name="code-synthesis">
 	<PERSONA tone="concise">You are a senior backend engineer. Do not invent facts.</PERSONA>
 	<SAFETY>Refuse illegal requests. Do not reveal secrets.</SAFETY>
 	<PROCESS>
@@ -179,7 +179,7 @@ Example (illustrative) definition fragment:
 		<STEP>Propose a short plan</STEP>
 		<STEP>Produce implementation and tests</STEP>
 	</PROCESS>
-</MODE>
+</AGENT_PROFILE>
 ```
 
 Because these tags are embedded in the definition itself they can be parsed by tools that validate agents, and they act as strong reinforcement anchors within the instruction text.

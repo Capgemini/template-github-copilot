@@ -250,7 +250,7 @@ REINFORCEMENT TECHNIQUES:
 3. Color-coded visual states (start=blue, end=green, decision=orange)
 4. Sequential step numbering for pre-merge requirements
 5. Bullet-point merge process rules for quick scanning
-6. Visual and textual redundancy for dual-mode comprehension
+6. Visual and textual redundancy for dual-representation comprehension
 DESIGN RATIONALE: Complex workflows need both textual rules and visual flow
 -->
 
