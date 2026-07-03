@@ -1,17 +1,26 @@
 ---
 name: docs-ssot-helper
-description: "Example skill for documentation updates. Use this when editing README files, ADR/PRD/design docs, or contribution guidance to keep documentation aligned with repository SSOT policies, links, and structure."
+description: "Example skill for documentation updates. Use this when editing README files, ADR/PRD/design docs, or contribution guidance to keep documentation aligned with the repository Single Source of Truth (SSOT): the one canonical place where policies, links, and structure live."
 ---
 
-# Documentation SSOT Helper (Example Skill)
+# Documentation Single Source of Truth Helper (Example Skill)
 
-Use this skill to produce consistent, policy-aligned documentation updates.
+Use this skill to produce consistent, policy-aligned documentation updates that stay tied to the repository's Single Source of Truth (SSOT).
+
+## What SSOT means
+
+SSOT stands for Single Source of Truth. It means one canonical file, section, or reference should define a policy or rule so the same guidance is not copied, drifted, or contradicted in multiple places.
+
+This skill helps you find that canonical source, reuse it instead of restating it, and update linked documentation so the repository stays consistent.
 
 ## When to use
 
 - User asks to add or update repository documentation
 - User asks to introduce new documentation artifacts and link them
 - User asks for doc consistency checks against repository standards
+- User asks to find or reduce duplicated policy text
+- User asks to align docs with the canonical source instead of repeating guidance
+- User asks to fix SSOT drift, conflicting guidance, or outdated links
 
 ## When not to use
 
