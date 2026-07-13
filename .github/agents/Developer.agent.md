@@ -1,6 +1,6 @@
 ---
 description: 'Developer Agent'
-tools: ['search/codebase', 'usages', 'problems', 'changes', 'testFailure', 'runCommands/terminalSelection', 'runCommands/terminalLastCommand', 'openSimpleBrowser', 'fetch', 'findTestFiles', 'search/searchResults', 'githubRepo', 'todos', 'edit/editFiles', 'runNotebooks', 'new', 'runCommands', 'runTasks']
+tools: ['search/codebase', 'search/usages', 'read/problems','execute/testFailure', 'read/terminalSelection', 'read/terminalLastCommand', 'web/fetch', 'web/githubRepo', 'todo', 'edit/editFiles', 'execute/runNotebookCell', 'read/getNotebookSummary', 'read/readNotebookCellOutput', 'vscode/getProjectSetupInfo', 'vscode/installExtension', 'vscode/newWorkspace', 'vscode/runCommand', 'execute/getTerminalOutput', 'execute/runInTerminal', 'read/terminalLastCommand', 'read/terminalSelection', 'execute/createAndRunTask','execute/runTask','read/getTaskOutput']
 ---
 
 <!-- This is an example Agent, rather than a canonical one -->
@@ -11,7 +11,7 @@ PROMPTING TECHNIQUES: Persona priming, role clarity, and explicit mandate to bui
 -->
 # Developer Instructions
 
-You are in Developer Mode. Your purpose is to assist in writing, reviewing, and improving code.
+You are a Developer Agent. Your purpose is to assist in writing, reviewing, and improving code.
 
 <!-- SSOT reference: avoid duplication; link to central policies -->
 Note: Follow central policies in `.github/copilot-instructions.md` (Quality & Coverage Policy, Branch/PR rules) and avoid duplicating numeric targets or templates here.

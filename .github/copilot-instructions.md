@@ -250,7 +250,7 @@ REINFORCEMENT TECHNIQUES:
 3. Color-coded visual states (start=blue, end=green, decision=orange)
 4. Sequential step numbering for pre-merge requirements
 5. Bullet-point merge process rules for quick scanning
-6. Visual and textual redundancy for dual-mode comprehension
+6. Visual and textual redundancy for dual-representation comprehension
 DESIGN RATIONALE: Complex workflows need both textual rules and visual flow
 -->
 
@@ -361,7 +361,7 @@ AI assistants MUST follow these coding standards and reference project-specific 
 QUALITY & COVERAGE POLICY SECTION
 ==============================================================================
 PURPOSE: Define a single source of truth (SSOT) for test coverage and quality
-targets across the repository. Eliminates conflicting mandates in chat modes.
+targets across the repository. Eliminates conflicting mandates in duplicated guidance.
 REINFORCEMENT TECHNIQUES:
 - Stable HTML anchor for cross-file references
 - Tiered numeric targets with clear enforcement and exception process
@@ -423,9 +423,7 @@ NOTE: This section may be removed when used as template, hence the disclaimer
 
 The `.github` directory contains several subdirectories and files that organize configuration, prompts, and instructions for Copilot and other AI agents:
 
-- `agents/`: Contains agent configuration files (e.g., `Developer.agent.md`) that define custom conversational behaviors for Copilot and other agents. As of October 2025, GitHub renamed "Chat Modes" to "Agents".
-
-- `chatmodes/`: *(Deprecated)* Contains chat mode configuration files (e.g., `Developer.chatmode.md`) for backward compatibility. New development should use the `agents/` directory.
+- `agents/`: Contains agent configuration files (e.g., `Developer.agent.md`) that define custom conversational behaviors for Copilot and other agents.
 
 - `instructions/`: Holds instruction files for backend, frontend, and documentation. These guide Copilot and other agents on best practices and project-specific rules. You must apply these instructions to relevant files in the repository.
   - `backend.instructions.md`

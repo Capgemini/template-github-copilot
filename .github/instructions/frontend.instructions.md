@@ -42,13 +42,13 @@ PROMPTING: Specify contract (props/state), error modes, and data flow norms.
 4. **Error Boundaries**: Add boundaries around risky trees; fail gracefully.
 
 <!--
-SECTION PURPOSE: Make testing guidance explicit and link to SSOTs (Tester chat mode and BDD instructions).
+SECTION PURPOSE: Make testing guidance explicit and link to SSOTs (Tester agent and BDD instructions).
 PROMPTING: Reference, don't duplicate. Keep actions concrete for frontend.
 -->
 ## Testing
 
 1. **SSOT References**
-	- Tester chat mode: `.github/chatmodes/Tester.chatmode.md`
+	- Tester agent: `.github/agents/Tester.agent.md`
 	- BDD tests instructions: `.github/instructions/bdd-tests.instructions.md`
 
 2. **Unit/UI Tests (default stack: Jest + Testing Library unless overridden)**

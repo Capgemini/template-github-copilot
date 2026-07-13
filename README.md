@@ -13,9 +13,9 @@ Welcome! This repository is a GitHub Template created by Capgemini. It provides 
 This repository is intended to help teams adopt Copilot best practices, understand configuration options, and accelerate AI-powered development. It contains:
 
 - Working Copilot configurations with examples:
-  - Example [Agents](.github/agents/README.md) *(new format)*
-  - Example [Chat modes](.github/chatmodes/README.md) *(deprecated, for backward compatibility)*
+  - Example [Agents](.github/agents/README.md) *(current custom-agent format)*
   - Example [Instructions](.github/instructions/README.md)
+  - Example [Skills](.github/skills/README.md)
   - Example [Prompts](.github/prompts/README.md)
 - A GitHub Copilot [configuration overview](.github/README.github.md)
 - Clear documentation to understand, configure, and extend Copilot
@@ -26,7 +26,7 @@ This repository is intended to help teams adopt Copilot best practices, understa
 ## How to get started
 
 1. Create a new repository using “Use this template” (or fork/clone).
-2. Review and adapt the example [agents](.github/agents/README.md), [chat modes](.github/chatmodes/README.md) *(deprecated)*, [instructions](.github/instructions/README.md), and [prompts](.github/prompts/README.md).
+2. Review and adapt the example [agents](.github/agents/README.md), [instructions](.github/instructions/README.md), [skills](.github/skills/README.md), and [prompts](.github/prompts/README.md).
 3. Read the project docs in [docs/README.md](docs/README.md).
 
 <!-- Replace this paragraph with hints on finding information elsewhere in the repository -->
@@ -49,29 +49,16 @@ Reuse and reference instructions files in your prompt files and agents to keep t
 
 ### 1. Custom Agents
 
-> **Note:** As of October 2025, GitHub renamed "Chat Modes" to "Agents". See [GitHub's announcement](https://github.blog/changelog/2025-10-28-custom-agents-for-github-copilot/) for details.
-
 The repository includes specialized agents located in `.github/agents/`:
 
 - **Developer**: Focuses on test-driven development with quality gates and design-first methodology
 - **Code Reviewer**: Implements systematic code review with best practices enforcement
+- **Documentation**: Standardizes documentation authoring using docs SSOT templates and workflows
 - **Tester**: Emphasizes BDD-focused testing approach with comprehensive test coverage
 
-> **Note:** VS Code now ships with built-in Planner and Documentation agents. This repository provides complementary agents that don't duplicate those built-in capabilities. For legacy compatibility, see the deprecated chat modes in `.github/chatmodes/`.
+> **Note:** VS Code now ships with a built-in Planner/Plan agent. This repository includes a custom Documentation agent because built-in Documentation is no longer available.
 
-### 2. Custom Chat Modes (Deprecated)
-
-> ⚠️ **DEPRECATED**: The `.github/chatmodes/` directory is maintained for backward compatibility with VS Code. New development should use the `.github/agents/` directory.
-
-The repository includes specialized chat modes located in `.github/chatmodes/`:
-
-- **Developer Mode**: Focuses on test-driven development with quality gates and design-first methodology
-- **Planner Mode**: Provides structured planning with task breakdown and dependency management
-- **Documentation Mode**: Standardizes documentation creation following repository templates
-- **Code Reviewer Mode**: Implements systematic code review with best practices enforcement
-- **Tester Mode**: Emphasizes BDD-focused testing approach with comprehensive test coverage
-
-### 3. Reusable Prompt Templates
+### 2. Reusable Prompt Templates
 
 Located in `.github/prompts/`, these templates provide standardized approaches for:
 
@@ -81,7 +68,7 @@ Located in `.github/prompts/`, these templates provide standardized approaches f
 - **`write-ears-spec.prompt.md`**: Creates requirements using Easy Approach to Requirements Syntax
 - **`copilot-setup-check.prompt.md`**: Evaluates and optimizes Copilot configuration
 
-### 4. Comprehensive Instruction System
+### 3. Comprehensive Instruction System
 
 The `.github/instructions/` directory contains detailed guidelines for:
 
@@ -90,7 +77,7 @@ The `.github/instructions/` directory contains detailed guidelines for:
 - **`docs.instructions.md`**: Documentation creation and maintenance standards
 - **`bdd-tests.instructions.md`**: Behavior-driven development testing methodology
 
-### 5. Repository Structure & Templates
+### 4. Repository Structure & Templates
 
 The `docs/` directory provides organized templates for:
 
@@ -99,7 +86,7 @@ The `docs/` directory provides organized templates for:
 - **Design Documents** (`docs/design/`): Technical design specifications
 - **Engineering Guidelines** (`docs/engineering/`): Development process documentation
 
-### 6. Project Planning Framework
+### 5. Project Planning Framework
 
 The `plans/` directory includes:
 
@@ -107,7 +94,7 @@ The `plans/` directory includes:
 - **Roadmap Management**: Strategic planning and milestone tracking
 - **TODO Management**: Task tracking and completion monitoring
 
-### 7. Workflow Integration
+### 6. Workflow Integration
 
 #### Branching Strategy
 
@@ -138,9 +125,9 @@ Types include: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 - Maintain changelog for significant updates
 - Archive deprecated features in `plans/archive/`
 
-### 8. Copying Copilot Customisations
+### 7. Copying Copilot Customisations
 
-The custom agents, chatmodes (deprecated), instructions and prompts can be copied into the same directory structure of another repository. Each file has comments that explain the approach, structure and content of each file.
+The custom agents, instructions, and prompts can be copied into the same directory structure of another repository. Each file has comments that explain the approach, structure, and content.
 
 Reuse and reference instructions files in your prompt files and agents to keep them clean and focused, and to avoid duplicating instructions.
 
@@ -184,15 +171,8 @@ flowchart LR
         subgraph AGENTS ["🤖 Agents"]
             DEV["Developer"]
             CR["CodeReview"]
+          DOCA["Documentation"]
             TEST["Testing"]
-        end
-
-        subgraph CHATMODES ["💬 Chat Modes (Deprecated)"]
-            DOC["Documentation"]
-            PLAN["Planner"]
-            DEV_OLD["Developer"]
-            CR_OLD["CodeReview"]
-            TEST_OLD["Testing"]
         end
 
         subgraph INSTRUCTIONS ["📋 Instructions"]
@@ -233,13 +213,10 @@ flowchart LR
     CI -.->|"references"| DOCS
     AGENTS -.->|"references"| PLANS
 
-    %% Agent/Chat Mode Integration (GitHub Config → Content)
-    DOC ==>|"uses templates"| ADR_TEMPLATE
-    DOC ==>|"uses templates"| PRD_TEMPLATE
-    DOC ==>|"follows rules"| DOCINST
-
-    PLAN ==>|"uses template"| PLAN_TEMPLATE
-    PLAN ==>|"manages"| TODO
+    %% Agent Integration (GitHub Config → Content)
+    DOCA ==>|"uses templates"| ADR_TEMPLATE
+    DOCA ==>|"uses templates"| PRD_TEMPLATE
+    DOCA ==>|"follows rules"| DOCINST
 
     DEV -.->|"references"| DOCS
     DEV -.->|"references"| PLANS
@@ -262,15 +239,13 @@ flowchart LR
     %% Styling
     classDef config fill:#e3f2fd,stroke:#1976d2,stroke-width:3px,color:#000
     classDef agent fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
-    classDef chatmode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
     classDef instruction fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
     classDef prompt fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
     classDef content fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
     classDef plan fill:#f1f8e9,stroke:#689f38,stroke-width:2px,color:#000
 
     class CI,README config
-    class DEV,CR,TEST agent
-    class DOC,PLAN,DEV_OLD,CR_OLD,TEST_OLD chatmode
+    class DEV,CR,DOCA,TEST agent
     class DOCINST,BACKEND,FRONTEND,BDD instruction
     class DOC_PROMPT,ADR_PROMPT,PRD_PROMPT,SETUP_PROMPT prompt
     class ADR_TEMPLATE,PRD_TEMPLATE,CODE_REVIEW content
@@ -285,13 +260,13 @@ flowchart LR
 
 ### Documentation Workflow
 
-- The built-in Documentation agent (VS Code) or `Documentation.chatmode.md` (deprecated) heavily references documentation instructions and templates
+- The custom `Documentation.agent.md` heavily references documentation instructions and templates
 - `docs.instructions.md` defines standards for all documentation types and their storage locations
 - Prompt files like `write-adr.prompt.md` and `write-prd.prompt.md` reference their respective templates and directories
 
 ### Planning Integration
 
-- The built-in Planner agent (VS Code) or `Planner.chatmode.md` (deprecated) integrates with the plans structure and references the plan template
+- The built-in Planner/Plan agent (VS Code) integrates with the plans structure and references the plan template
 - Plans reference core configuration files and maintain the TODO workflow
 
 ### Cross-Cutting Concerns
@@ -328,7 +303,6 @@ This repo includes a minimal coverage enforcement workflow (`.github/workflows/c
 - Testing
   - BDD feature guidance (SSOT): `.github/instructions/bdd-tests.instructions.md`
   - Tester agent (enforces policy): `.github/agents/Tester.agent.md`
-  - Tester chat mode (deprecated): `.github/chatmodes/Tester.chatmode.md`
 - Backend
   - Backend instructions (SSOT): `.github/instructions/backend.instructions.md`
   - Architecture: `.github/instructions/backend.instructions.md#backend-architecture`
@@ -342,7 +316,7 @@ This repo includes a minimal coverage enforcement workflow (`.github/workflows/c
 
 Notes:
 
-- Chat modes and prompts should reference these SSOT files. Avoid duplicating numeric thresholds, templates, or process steps in multiple places.
+- Agents and prompts should reference these SSOT files. Avoid duplicating numeric thresholds, templates, or process steps in multiple places.
 - CI tasks (if added) should validate adherence to SSOT anchors where practical.
 
 <!-- © Capgemini 2025 -->
